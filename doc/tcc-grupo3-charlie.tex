@@ -31,6 +31,9 @@
 \usepackage{graphicx}
 \usepackage{microtype}
 \usepackage{tabularx}
+\usepackage{float}
+\newfloat{quadro}{htb}{loq}[chapter]
+\floatname{quadro}{Quadro}
 
 % ---
 % Pacotes adicionais
@@ -489,6 +492,39 @@ biodiversidade, energia, transporte e uso de insumos. A agricultura familiar,
 as cooperativas, os mercados locais e o cinturão verde complementam a produção
 em escala e têm papel relevante no abastecimento de alimentos frescos.
 
+Para organizar esses antecedentes, o Quadro~\ref{qua:antecedentes-seguranca}
+reúne marcos normativos e políticos que ajudam a compreender a formação do
+problema no Estado de São Paulo. Os marcos não descrevem uma sequência exclusiva
+da história paulista; representam referências nacionais e internacionais que
+orientam políticas, práticas produtivas e ações de abastecimento aplicáveis ao
+Estado.
+
+\begin{quadro}[htb]
+\centering
+\caption{Antecedentes da segurança alimentar e do agronegócio sustentável em São Paulo}
+\label{qua:antecedentes-seguranca}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{|p{1.8cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Período} & \textbf{Marco} & \textbf{Relação com o problema de pesquisa} \\
+\hline
+1988--2010 & Constituição Federal e reconhecimento da alimentação como direito social pela Emenda Constitucional n. 64/2010. & Estabelece a responsabilidade pública de promover condições para o acesso à alimentação, fundamento da segurança alimentar e nutricional. \\
+\hline
+2006 & Lei n. 11.346/2006 (LOSAN), que cria o Sistema Nacional de Segurança Alimentar e Nutricional. & Integra acesso regular a alimentos, qualidade, sustentabilidade e articulação entre políticas públicas, dimensões diretamente relevantes para São Paulo. \\
+\hline
+2006 & Lei n. 11.326/2006, que estabelece diretrizes para a Política Nacional da Agricultura Familiar. & Reconhece a sustentabilidade ambiental, social e econômica e prevê instrumentos de crédito, assistência técnica, pesquisa e comercialização. \\
+\hline
+2009 & Lei n. 11.947/2009, que organiza o PNAE. & Relaciona alimentação adequada, hábitos locais, desenvolvimento sustentável e aquisição de alimentos da agricultura familiar, criando uma conexão concreta entre produção e consumo. \\
+\hline
+2015 & Objetivo de Desenvolvimento Sustentável 2 (ODS 2), da ONU. & Vincula erradicação da fome, segurança alimentar, melhoria da nutrição e agricultura sustentável à agenda de desenvolvimento. \\
+\hline
+Atualidade & Expansão da produção agropecuária paulista e aumento das pressões sobre água, solo, biodiversidade, clima, renda e abastecimento. & Define o contexto atual do problema: conciliar produtividade e competitividade do agronegócio com acesso a alimentos adequados e conservação dos recursos naturais. \\
+\hline
+\end{tabularx}
+\fonte{Elaboração própria, com base em Brasil (1988, 2006a, 2006b, 2009) e ONU (2015).}
+\end{quadro}
+
 \subsection{Semente de Futuro}
 As sementes de futuro identificadas para o tema são fatos portadores de
 futuro, eventos futuros preliminares, tendências de peso, megatendências e
@@ -500,39 +536,61 @@ São fatos já ocorridos ou em curso que podem alterar as condições de seguran
 alimentar e sustentabilidade no futuro. Foram identificados os seguintes
 fatos portadores de futuro:
 
-\begin{itemize}
-	\item expansão de tecnologias digitais, de agricultura de precisão e de
-	sistemas de rastreabilidade;
-	\item fortalecimento do debate público sobre alimentação saudável, desperdício
-	e segurança alimentar;
-	\item crescimento da demanda por alimentos produzidos com menor impacto
-	ambiental e por informações sobre sua origem;
-	\item ocorrência de eventos climáticos extremos com efeitos sobre safras,
-	preços, disponibilidade de água e logística;
-	\item ampliação de feiras, circuitos curtos de comercialização, cooperativas e
-	iniciativas de compra direta de produtores;
-	\item mudanças regulatórias e políticas públicas relacionadas ao clima,
-	abastecimento, agricultura familiar e alimentação escolar.
-\end{itemize}
+\begin{quadro}[htb]
+\centering
+\caption{Fatos portadores de futuro relacionados ao problema de estudo}
+\label{qua:fatos-portadores-futuro}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{|p{1.4cm}|>{\raggedright\arraybackslash}X|p{3.3cm}|}
+\hline
+\textbf{FPF} & \textbf{Fato portador de futuro} & \textbf{Expressão do poder predominante} \\
+\hline
+1 & Expansão de tecnologias digitais, de agricultura de precisão e de sistemas de rastreabilidade. & Científico-tecnológica \\
+\hline
+2 & Fortalecimento do debate público sobre alimentação saudável, desperdício e segurança alimentar. & Psicossocial e política \\
+\hline
+3 & Crescimento da demanda por alimentos produzidos com menor impacto ambiental e por informações sobre sua origem. & Psicossocial e econômica \\
+\hline
+4 & Ocorrência de eventos climáticos extremos com efeitos sobre safras, preços, disponibilidade de água e logística. & Econômica e política \\
+\hline
+5 & Ampliação de feiras, circuitos curtos de comercialização, cooperativas e iniciativas de compra direta de produtores. & Econômica e psicossocial \\
+\hline
+6 & Mudanças regulatórias e políticas públicas relacionadas ao clima, abastecimento, agricultura familiar e alimentação escolar. & Política \\
+\hline
+\end{tabularx}
+\fonte{Elaboração própria.}
+\end{quadro}
 
 \subsubsection{Eventos Futuro Preliminares}
 Com base nos fatos identificados, são plausíveis os seguintes eventos futuros
 preliminares:
 
-\begin{itemize}
-	\item aumento da participação de alimentos frescos e minimamente processados
-	no consumo cotidiano;
-	\item ampliação da rastreabilidade e da certificação de práticas sustentáveis
-	nas cadeias agroalimentares;
-	\item redução ou interrupção temporária da oferta de determinados alimentos
-	em razão de eventos climáticos ou falhas logísticas;
-	\item aumento dos preços de alimentos essenciais e consequente redução do
-	acesso das famílias de menor renda;
-	\item expansão de parcerias entre produtores, varejistas, municípios,
-	universidades e organizações da sociedade civil;
-	\item crescimento do desperdício evitável caso a produção e a distribuição
-	não sejam coordenadas com a demanda.
-\end{itemize}
+\begin{quadro}[htb]
+\centering
+\caption{Eventos futuros preliminares relacionados ao problema de estudo}
+\label{qua:eventos-futuros-preliminares}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{|p{1.8cm}|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{FPF} & \textbf{Evento futuro preliminar} \\
+\hline
+1 e 3 & Aumento da participação de alimentos frescos e minimamente processados no consumo cotidiano. \\
+\hline
+1 e 3 & Ampliação da rastreabilidade e da certificação de práticas sustentáveis nas cadeias agroalimentares. \\
+\hline
+4 e 5 & Redução ou interrupção temporária da oferta de determinados alimentos em razão de eventos climáticos ou falhas logísticas. \\
+\hline
+3 e 4 & Aumento dos preços de alimentos essenciais e consequente redução do acesso das famílias de menor renda. \\
+\hline
+2 e 5 & Expansão de parcerias entre produtores, varejistas, municípios, universidades e organizações da sociedade civil. \\
+\hline
+4 e 5 & Crescimento do desperdício evitável caso a produção e a distribuição não sejam coordenadas com a demanda. \\
+\hline
+\end{tabularx}
+\fonte{Elaboração própria; eventos formulados como hipóteses prospectivas a partir dos fatos portadores de futuro.}
+\end{quadro}
 
 \subsubsection{Tendências de Peso}
 As tendências de peso são comportamentos que apresentam continuidade e podem
