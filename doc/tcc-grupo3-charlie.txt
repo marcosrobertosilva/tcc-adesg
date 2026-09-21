@@ -1,0 +1,268 @@
+                  Cícero Santos Melo
+                  Ivan Lacava Júnior
+                   Góis Polícia Civil
+                   Márcio Bontempo
+                 Marcos Roberto Silva
+             Pedro Octavio de Souza Barros
+
+
+
+
+Segurança Alimentar e Agronegócio Sustentável
+           no Estado de São Paulo
+
+
+
+
+                      São Paulo
+                         2026
+                   Cícero Santos Melo
+                    Ivan Lacava Júnior
+                     Góis Polícia Civil
+                    Márcio Bontempo
+                 Marcos Roberto Silva
+             Pedro Octavio de Souza Barros
+
+
+
+
+Segurança Alimentar e Agronegócio Sustentável no
+               Estado de São Paulo
+
+
+
+                            Trabalho de Conclusão de Curso apresentado
+                            à Associação dos Diplomados da Escola Supe-
+                            rior de Guerra, Delegacia do Estado de São
+                            Paulo, como requisito para a obtenção do
+                            diploma do Curso de Estudos de Política e
+                            Estratégia, 69a turma.
+
+
+
+           ASSOCIAÇÃO DOS DIPLOMADOS DA
+            ESCOLA SUPERIOR DE GUERRA
+              Delegacia do Estado de São Paulo
+
+
+
+
+        Orientador: Prof. Reinaldo Bento de Lima
+
+
+
+                        São Paulo
+                           2026
+Ficha catalográfica
+
+SANTOS MELO, Cícero; LACAVA JÚNIOR, Ivan; POLÍCIA CIVIL,
+Góis; BONTEMPO, Márcio; SILVA, Marcos Roberto; BARROS, Pedro
+Octavio de Souza. Segurança Alimentar e Agronegócio Sustentável no
+Estado de São Paulo. São Paulo: ADESG, 2026.
+
+Trabalho de Conclusão de Curso – Associação dos Diplomados da Escola
+Superior de Guerra, Delegacia do Estado de São Paulo, 2026.
+
+1. Segurança alimentar. 2. Agronegócio sustentável. 3. Planejamento es-
+tratégico. 4. São Paulo. I. Associação dos Diplomados da Escola Superior
+de Guerra.
+                            FOLHA DE APROVAÇÃO
+
+Trabalho de Conclusão de Curso apresentado à Associação dos Diplomados da Escola
+Superior de Guerra, Delegacia do Estado de São Paulo, como requisito para a obtenção do
+diploma do Curso de Estudos de Política e Estratégia.
+
+
+
+Aprovado em:          /        /           .
+
+
+
+
+                            Prof. Reinaldo Bento de Lima
+                                     Orientador
+
+
+
+                              Profa. Nídia Caivano
+                      ADESG, Delegacia do Estado de São Paulo
+
+
+
+                              Nome do membro da banca
+                                     Instituição
+AGRADECIMENTOS
+                                  RESUMO
+Segundo a ABNT (2003, 3.1-3.2), o resumo deve ressaltar o objetivo, o método, os
+resultados e as conclusões do documento. A ordem e a extensão destes itens dependem
+do tipo de resumo (informativo ou indicativo) e do tratamento que cada item recebe no
+documento original. O resumo deve ser precedido da referência do documento, com exceção
+do resumo inserido no próprio documento. (. . . ) As palavras-chave devem figurar logo
+abaixo do resumo, antecedidas da expressão Palavras-chave:, separadas entre si por ponto
+e finalizadas também por ponto.
+
+Palavras-chaves: latex. abntex. editoração de texto.
+LISTA DE ILUSTRAÇÕES
+LISTA DE TABELAS
+ LISTA DE ABREVIATURAS E SIGLAS
+
+ABNT     Associação Brasileira de Normas Técnicas
+
+abnTeX   ABsurdas Normas para TeX
+        LISTA DE SÍMBOLOS
+
+Γ   Letra grega Gama
+
+Λ   Lambda
+
+ζ   Letra grega minúscula zeta
+
+∈   Pertence
+                                  SUMÁRIO
+
+          INTRODUÇÃO           . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+1         FASE DE DIAGNÓSTICO . . . . . . . . . . . . . . . . . . . . . . .                  13
+1.1       Análise do ambiente . . . . . . . . . . . . . . . . . . . . . . . . . . . .        13
+1.1.1     Antecedentes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     13
+1.1.2     Semente de Futuro . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      13
+1.1.2.1   Fatos Portadores de Futuro . . . . . . . . . . . . . . . . . . . . . . . . . . .   13
+1.1.2.2   Eventos Futuro Preliminares . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+1.1.2.3   Tendências de Peso . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     13
+1.1.2.4   Mega-tendências . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+1.1.2.5   Atores Sociais ou Stakeholders . . . . . . . . . . . . . . . . . . . . . . . . .   13
+1.1.3     Ambientes Externo e Interno . . . . . . . . . . . . . . . . . . . . . . . . .      13
+1.1.3.1   Análise do Ambiente Externo . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+1.1.3.2   Análise do Ambiente Interno . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+1.1.4     Análise da Matriz SWOT Entre-cruzada e Vetores Estratégicos . . . . . . .          13
+1.1.4.1   Análise dos Resultados do Entrecruzamento da Matriz SWOT . . . . . . . . .         13
+1.1.5     Análise dos Riscos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     13
+1.1.5.1   Análise de Riscos das Ameaças e das Oportunidades . . . . . . . . . . . . . .      13
+
+
+          BIBLIOGRAFIA . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+2         COMPONENTES DO GRUPO . . . . . . . . . . . . . . . . . . . . . 15
+                                                                                          11
+
+
+
+                              INTRODUÇÃO
+
+       O debate sobre segurança alimentar e agronegócio sustentável ultrapassa a produção
+de alimentos e envolve o acesso regular da população a uma alimentação adequada, nutritiva
+e compatível com a realidade econômica, social e ambiental do território. No Estado de
+São Paulo, essa discussão pode ser observada tanto na força de sua produção agropecuária
+quanto nos hábitos alimentares que fazem parte da identidade cultural paulista.
+        Um exemplo é o chamado prato feito, ou PF, cuja composição tradicional reúne
+arroz, feijão, uma fonte de proteína, guarnição e salada. A combinação de arroz e feijão
+fornece nutrientes importantes e representa uma solução alimentar de amplo acesso.
+Carnes, frango, ovos, batata, farofa, alface e tomate completam uma refeição que, quando
+preparada com alimentos frescos e produzidos regionalmente, articula tradição, nutrição e
+sustentabilidade econômica.
+        O cardápio paulista também se expressa em preparações associadas a dias da
+semana, como a feijoada, o virado à paulista, a macarronada, a lasanha, o peixe e o
+pastel de feira. Esses costumes revelam a dimensão cultural da alimentação, mas também
+permitem discutir a qualidade nutricional, a origem dos ingredientes, o desperdício e os
+impactos ambientais dos sistemas de produção e distribuição.
+        Essa abordagem relaciona-se diretamente ao Objetivo de Desenvolvimento Susten-
+tável 2 da Organização das Nações Unidas, que propõe a erradicação da fome, o acesso a
+alimentos seguros e nutritivos e o desenvolvimento de uma agricultura sustentável (Nações
+Unidas Brasil (s.d.)). A alimentação adequada também se articula ao ODS 3, relativo à
+saúde e ao bem-estar, ao ODS 12, voltado ao consumo e à produção responsáveis, e ao
+ODS 13, relacionado à ação contra a mudança do clima.
+        No âmbito da qualidade da dieta, a Diversidade Alimentar Mínima constitui
+uma referência importante para avaliar a variedade e a qualidade da alimentação. A
+composição tradicional do PF pode contemplar diferentes grupos alimentares, desde que
+seja acompanhada por variedade, moderação e presença regular de alimentos in natura ou
+minimamente processados (World Health Organization (2026)).
+       As recomendações de alimentação saudável também valorizam frutas, verduras,
+legumes, leguminosas, nozes e cereais integrais. Nesse contexto, a referência de aproximada-
+mente 400 gramas diárias de frutas e vegetais, associada à redução de açúcares livres, sódio,
+gorduras em excesso e alimentos ultraprocessados, contribui para avaliar criticamente os
+hábitos alimentares e as políticas de abastecimento. Assim, a valorização da culinária
+paulista não significa apenas preservar receitas tradicionais, mas também aperfeiçoá-las
+sob os critérios de saúde, acessibilidade e sustentabilidade (World Health Organization
+INTRODUÇÃO                                                                             12
+
+
+(2026)).
+       O Estado de São Paulo dispõe de importante cinturão verde e de uma rede ampla
+de produtores, distribuidores, feiras e estabelecimentos de alimentação. O fortalecimento
+desses circuitos locais pode reduzir distâncias de transporte, diminuir perdas e emissões,
+estimular a agricultura familiar e ampliar o acesso da população a alimentos frescos. Ao
+mesmo tempo, exige planejamento para que a produção agrícola concilie produtividade,
+conservação dos recursos naturais, uso racional da água, redução de insumos de alto
+impacto e inclusão social.
+        Este trabalho tem como objetivo analisar a relação entre segurança alimentar, há-
+bitos alimentares paulistas e agronegócio sustentável, tomando como referência o cardápio
+básico do paulista e sua conexão com os ODS. Para isso, aplica a metodologia de planeja-
+mento estratégico, examinando o ambiente, o poder, os cenários, as opções estratégicas e
+as diretrizes necessárias à construção de ações voltadas ao desenvolvimento sustentável.
+Busca-se, dessa forma, contribuir para uma visão integrada na qual alimentação adequada,
+produção responsável, desenvolvimento econômico e proteção ambiental sejam tratados
+como dimensões complementares do bem comum.
+                                                                    13
+
+
+
+1 FASE DE DIAGNÓSTICO
+
+1.1 ANÁLISE DO AMBIENTE
+1.1.1 Antecedentes
+
+1.1.2 Semente de Futuro
+1.1.2.1 Fatos Portadores de Futuro
+
+1.1.2.2 Eventos Futuro Preliminares
+
+1.1.2.3 Tendências de Peso
+
+1.1.2.4 Mega-tendências
+
+1.1.2.5 Atores Sociais ou Stakeholders
+
+1.1.3 Ambientes Externo e Interno
+1.1.3.1 Análise do Ambiente Externo
+
+1.1.3.2 Análise do Ambiente Interno
+
+1.1.4 Análise da Matriz SWOT Entre-cruzada e Vetores Estratégicos
+1.1.4.1 Análise dos Resultados do Entrecruzamento da Matriz SWOT
+
+1.1.5 Análise dos Riscos
+1.1.5.1 Análise de Riscos das Ameaças e das Oportunidades
+                                                                                      14
+
+
+
+                             BIBLIOGRAFIA
+
+ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. NBR 6028 : Resumo -
+apresentação. Rio de Janeiro, 2003. 2 p. Citado na página 5.
+
+Nações Unidas Brasil. Objetivo de Desenvolvimento Sustentável 2: Fome zero e agricultura
+sustentável. s.d. Disponível em: <https://brasil.un.org/pt-br/sdgs/2>. Acesso em: 21 set.
+2026. Citado na página 11.
+
+World Health Organization. Healthy diet. 2026. Disponível em: <https://www.who.int/
+news-room/fact-sheets/detail/healthy-diet>. Acesso em: 21 set. 2026. Citado na página
+11.
+                                                                            15
+
+
+
+2 COMPONENTES DO GRUPO
+
+  Componentes do grupo
+
+  No.   de    Nome                   Título profissio- Função       no   Assinatura
+  inscrição                          nal              grupo
+  06          Cícero Santos Melo                      Pesquisador
+  30          Ivan Lacava Júnior                      Pesquisador
+  16          Góis Polícia Civil                      Pesquisador
+  20          Márcio Bontempo                         Pesquisador
+  23          Marcos Roberto Silva                    Pesquisador
+  26          Pedro Octavio de                        Pesquisador
+              Souza Barros
+
