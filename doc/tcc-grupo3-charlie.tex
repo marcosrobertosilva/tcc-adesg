@@ -1,41 +1,12 @@
-%% abtex2-modelo-relatorio-tecnico.tex, v-1.9.7 laurocesar
-%% Copyright 2012-2018 by abnTeX2 group at http://www.abntex.net.br/ 
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%%
-%% This work has the LPPL maintenance status `maintained'.
-%% 
-%% The Current Maintainer of this work is the abnTeX2 team, led
-%% by Lauro César Araujo. Further information are available on 
-%% http://www.abntex.net.br/
-%%
-%% This work consists of the files abntex2-modelo-relatorio-tecnico.tex,
-%% abntex2-modelo-include-comandos and abntex2-modelo-references.bib
-%%
-
-% ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
-% abnTeX2: Modelo de Relatório Técnico/Acadêmico em conformidade com 
-% ABNT NBR 10719:2015 Informação e documentação - Relatório técnico e/ou
-% científico - Apresentação
-% ------------------------------------------------------------------------ 
-% ------------------------------------------------------------------------
-
 \documentclass[
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em recto e verso. Oposto a oneside
+	oneside,			% twoside para impressão em recto e verso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
@@ -43,35 +14,29 @@
 	french,				% idioma adicional para hifenização
 	spanish,			% idioma adicional para hifenização
 	brazil,				% o último idioma é o principal do documento
-	]{abntex2}
-
+ ]{abntex2}
 
 % ---
 % PACOTES
 % ---
 
 % ---
-% Pacotes fundamentais 
+% Pacotes fundamentais
 % ---
-\usepackage{lmodern}			% Usa a fonte Latin Modern
-\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
-\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
-\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
-\usepackage{color}				% Controle das cores
-\usepackage{graphicx}			% Inclusão de gráficos
-\usepackage{microtype} 			% para melhorias de justificação
-% ---
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{tabularx}
 
 % ---
-% Pacotes adicionais, usados no anexo do modelo de folha de identificação
+% Pacotes adicionais
 % ---
 \usepackage{multicol}
 \usepackage{multirow}
-% ---
-	
-% ---
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
-% ---
 \usepackage{lipsum}				% para geração de dummy text
 % ---
 
@@ -110,9 +75,9 @@
 \local{São Paulo}
 \data{2026}
 \instituicao{%
-  ASSOCIAÇÃO DOS DIPLOMADOS DA ESCOLA SUPERIOR DE GUERRA
+  ASSOCIAÇÃO DOS DIPLOMADOS DA \\ ESCOLA SUPERIOR DE GUERRA
   \par
-  Delegacia no Estado de São Paulo
+  Delegacia do Estado de São Paulo
   }
 \tipotrabalho{Trabalho de Conclusão de Curso}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
@@ -197,62 +162,109 @@ Estudos de Política e Estratégia, 69a turma.}
 % ---
 
 % ---
+% Ficha catalográfica
+% Substitua os campos provisórios pelos dados fornecidos pela biblioteca.
+% ---
+\begin{fichacatalografica}
+\begin{center}
+\fbox{\begin{minipage}{12cm}
+\small
+\textbf{Ficha catalográfica}
+
+\vspace{0.5cm}
+
+SANTOS MELO, Cícero; LACAVA JÚNIOR, Ivan; POLÍCIA CIVIL, Góis;
+BONTEMPO, Márcio; SILVA, Marcos Roberto; BARROS, Pedro Octavio de Souza.
+\textit{Segurança Alimentar e Agronegócio Sustentável no Estado de São Paulo}.
+São Paulo: ADESG, 2026.
+
+\vspace{0.5cm}
+
+Trabalho de Conclusão de Curso -- Associação dos Diplomados da Escola Superior
+de Guerra, Delegacia do Estado de São Paulo, 2026.
+
+\vspace{0.5cm}
+
+1. Segurança alimentar. 2. Agronegócio sustentável. 3. Planejamento estratégico.
+4. São Paulo. I. Associação dos Diplomados da Escola Superior de Guerra.
+\end{minipage}}
+\end{center}
+\end{fichacatalografica}
+% ---
+
+% ---
+% Folha de aprovação
+% Preencha a data, os nomes e as instituições da banca examinadora.
+% ---
+\begin{folhadeaprovacao}
+\begin{center}
+\textbf{FOLHA DE APROVAÇÃO}
+\end{center}
+
+\noindent
+Trabalho de Conclusão de Curso apresentado à Associação dos Diplomados da
+Escola Superior de Guerra, Delegacia do Estado de São Paulo, como requisito
+para a obtenção do diploma do Curso de Estudos de Política e Estratégia.
+
+\vspace{1cm}
+
+\noindent
+Aprovado em: \underline{\hspace{1.5cm}}/\underline{\hspace{1.5cm}}/\underline{\hspace{2cm}}.
+
+\vfill
+
+\assinatura{Prof. Reinaldo Bento de Lima\\Orientador}
+\assinatura{Profa. Nídia Caivano\\ADESG, Delegacia do Estado de São Paulo}
+\assinatura{Nome do membro da banca\\Instituição}
+\end{folhadeaprovacao}
+% ---
+
+% ---
 % Anverso da folha de rosto:
 % ---
 
-{
-\ABNTEXchapterfont
+% {
+% \ABNTEXchapterfont
 
-\vspace*{\fill}
+% \vspace*{\fill}
 
-Conforme a ABNT NBR 10719:2015, seção 4.2.1.1.1, o anverso da folha de rosto
-deve conter:
+% Conforme a ABNT NBR 10719:2015, seção 4.2.1.1.1, o anverso da folha de rosto
+% deve conter:
 
-\begin{alineas}
-  \item nome do órgão ou entidade responsável que solicitou ou gerou o
-   relatório; 
-  \item título do projeto, programa ou plano que o relatório está relacionado;
-  \item título do relatório;
-  \item subtítulo, se houver, deve ser precedido de dois pontos, evidenciando a
-   sua subordinação ao título. O relatório em vários volumes deve ter um título
-   geral. Além deste, cada volume pode ter um título específico; 
-  \item número do volume, se houver mais de um, deve constar em cada folha de
-   rosto a especificação do respectivo volume, em algarismo arábico; 
-  \item código de identificação, se houver, recomenda-se que seja formado
-   pela sigla da instituição, indicação da categoria do relatório, data,
-   indicação do assunto e número sequencial do relatório na série; 
-  \item classificação de segurança. Todos os órgãos, privados ou públicos, que
-   desenvolvam pesquisa de interesse nacional de conteúdo sigiloso, devem
-    informar a classificação adequada, conforme a legislação em vigor; 
-  \item nome do autor ou autor-entidade. O título e a qualificação ou a função
-   do autor podem ser incluídos, pois servem para indicar sua autoridade no
-   assunto. Caso a instituição que solicitou o relatório seja a mesma que o
-   gerou, suprime-se o nome da instituição no campo de autoria; 
-  \item local (cidade) da instituição responsável e/ou solicitante; NOTA: No
-   caso de cidades homônimas, recomenda-se o acréscimo da sigla da unidade da
-   federação.
-  \item ano de publicação, de acordo com o calendário universal (gregoriano),
-  deve ser apresentado em algarismos arábicos.
-\end{alineas}
+% \begin{alineas}
+%   \item nome do órgão ou entidade responsável que solicitou ou gerou o
+%    relatório; 
+%   \item título do projeto, programa ou plano que o relatório está relacionado;
+%   \item título do relatório;
+%   \item subtítulo, se houver, deve ser precedido de dois pontos, evidenciando a
+%    sua subordinação ao título. O relatório em vários volumes deve ter um título
+%    geral. Além deste, cada volume pode ter um título específico; 
+%   \item número do volume, se houver mais de um, deve constar em cada folha de
+%    rosto a especificação do respectivo volume, em algarismo arábico; 
+%   \item código de identificação, se houver, recomenda-se que seja formado
+%    pela sigla da instituição, indicação da categoria do relatório, data,
+%    indicação do assunto e número sequencial do relatório na série; 
+%   \item classificação de segurança. Todos os órgãos, privados ou públicos, que
+%    desenvolvam pesquisa de interesse nacional de conteúdo sigiloso, devem
+%     informar a classificação adequada, conforme a legislação em vigor; 
+%   \item nome do autor ou autor-entidade. O título e a qualificação ou a função
+%    do autor podem ser incluídos, pois servem para indicar sua autoridade no
+%    assunto. Caso a instituição que solicitou o relatório seja a mesma que o
+%    gerou, suprime-se o nome da instituição no campo de autoria; 
+%   \item local (cidade) da instituição responsável e/ou solicitante; NOTA: No
+%    caso de cidades homônimas, recomenda-se o acréscimo da sigla da unidade da
+%    federação.
+%   \item ano de publicação, de acordo com o calendário universal (gregoriano),
+%   deve ser apresentado em algarismos arábicos.
+% \end{alineas}
 
-\vspace*{\fill}
-}
+% \vspace*{\fill}
+% }
 
 % ---
 % Agradecimentos
 % ---
 \begin{agradecimentos}
-O agradecimento principal é direcionado a Youssef Cherem, autor do
-\nameref{formulado-identificacao} (\autopageref{formulado-identificacao}).
-
-Os agradecimentos especiais são direcionados ao Centro de Pesquisa em
-Arquitetura da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-Brasília (CPAI), ao grupo de usuários
-\emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-novos voluntários do grupo
-\emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-\url{http://www.abntex.net.br/}}~que contribuíram e que ainda
-contribuirão para a evolução do abn\TeX.
 
 \end{agradecimentos}
 % ---
@@ -331,223 +343,108 @@ contribuirão para a evolução do abn\TeX.
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
-\chapter*[Introdução]{Introdução}
-\addcontentsline{toc}{chapter}{Introdução}
-
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de relatórios técnicos e/ou científicos produzidos
-conforme a ABNT NBR 10719:2015 \emph{Informação e documentação - Relatório
-técnico e/ou científico - Apresentação}.
-
-A expressão ``Modelo canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
-
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
-
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folhas de rosto, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} para mais informações.
-
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. 
-
-Equipe \abnTeX 
-
-Lauro César Araujo
-
-
-% ----------------------------------------------------------
-% PARTE - preparação da pesquisa
-% ----------------------------------------------------------
-\part{Preparação do relatório}
-
-% ----------------------------------------------------------
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
-% ----------------------------------------------------------
-
-\include{abntex2-modelo-include-comandos}
-
-
-% ----------------------------------------------------------
-% Parte de resultados
-% ----------------------------------------------------------
-\part{Resultados}
+\chapter*[INTRODUÇÃO]{INTRODUÇÃO}
+\addcontentsline{toc}{chapter}{INTRODUÇÃO}
 
 % ---
-% Capitulo de revisão de literatura
+% Fase de diagnóstico
 % ---
-\chapter{Lorem ipsum dolor sit amet}
+\chapter{Fase de diagnóstico}
 
-% ---
-\section{Aliquam vestibulum fringilla lorem}
-% ---
+\section{Análise do ambiente}
+\subsection{Antecedentes}
+\subsection{Semente de Futuro}
+\subsubsection{Fatos Portadores de Futuro}
+\subsubsection{Eventos Futuro Preliminares}
+\subsubsection{Tendências de Peso}
+\subsubsection{Mega-tendências}
+\subsubsection{Atores Sociais ou Stakeholders}
+\subsection{Ambientes Externo e Interno}
+\subsubsection{Análise do Ambiente Externo}
+\subsubsection{Análise do Ambiente Interno}
+\subsection{Análise da Matriz SWOT Entre-cruzada e Vetores Estratégicos}
+\subsubsection{Análise dos Resultados do Entrecruzamento da Matriz SWOT}
+\subsection{Análise dos Riscos}
+\subsubsection{Análise de Riscos das Ameaças e das Oportunidades}
 
-\lipsum[1]
+% \section{Análise do poder}
+% \subsection{Planos em Vigor}
+% \subsection{Necessidades}
+% \subsection{Meios Disponíveis e Potenciais}
 
-\lipsum[2-3]
+% \chapter{Fase política}
+% \section{Elaboração de cenários}
+% \subsection{Análise Estrutural}
+% \subsubsection{Reavaliação das Tendências de Peso}
+% \subsubsection{Análise dos Impactos Cruzados}
+% \subsubsection{Análise da Estratégia dos Atores}
+% \subsubsection{Matriz de Interesse dos Atores}
+% \subsection{Elaboração de Cenários Extremos}
+% \section{Concepção política}
+% \subsection{Objetivos de Estado e Objetivos de Governo}
+% \subsection{Fatores Críticos de Sucesso}
 
-% ---
-% Finaliza a parte no bookmark do PDF
-% para que se inicie o bookmark na raiz
-% e adiciona espaço de parte no Sumário
-% ---
-\phantompart
+% \chapter{Fase estratégica}
+% \section{Concepção estratégica}
+% \subsection{Levantamento dos Óbices}
+% \subsection{Definição das Linhas de Ação Estratégicas}
+% \subsubsection{Teste de Adequabilidade}
+% \subsubsection{Teste de Exequibilidade}
+% \subsubsection{Teste de Aceitabilidade}
+% \subsection{Opção Estratégica}
+% \subsection{Diretrizes Estratégicas}
+% \section{Programação}
+% \subsection{Orçamentos}
+% \subsection{Planos, Programas e Projetos}
 
-% ---
-% Conclusão
-% ---
-\chapter{Conclusão}
-% ---
+% \chapter{Fase da gestão}
+% \section{Execução}
+% \subsection{Coordenação}
+% \subsection{Implantação}
+% \section{Controle}
+% \subsection{Acompanhamento}
+% \subsection{Avaliação}
 
-\lipsum[31-33]
+% \chapter{Conclusão}
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
 % ----------------------------------------------------------
 \postextual
 
-% ----------------------------------------------------------
-% Referências bibliográficas
-% ----------------------------------------------------------
+%---------------------------------------------------------------------
+% Bibliografia
+%---------------------------------------------------------------------
+\renewcommand{\bibname}{BIBLIOGRAFIA}
 \bibliography{tcc-grupo3-charlie}
 
-% ----------------------------------------------------------
-% Glossário
-% ----------------------------------------------------------
-%
-% Consulte o manual da classe abntex2 para orientações sobre o glossário.
-%
-%\glossary
-
-% ----------------------------------------------------------
-% Apêndices
-% ----------------------------------------------------------
-
-% ---
-% Inicia os apêndices
-% ---
-\begin{apendicesenv}
-
-% Imprime uma página indicando o início dos apêndices
-\partapendices
-
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
-
-\end{apendicesenv}
-% ---
-
-
-% ----------------------------------------------------------
-% Anexos
-% ----------------------------------------------------------
-
-% ---
-% Inicia os anexos
-% ---
-\begin{anexosenv}
-
-% Imprime uma página indicando o início dos anexos
-\partanexos
-
-% ---
-\chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
-
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
-\end{anexosenv}
-
 %---------------------------------------------------------------------
-% INDICE REMISSIVO
+% Componentes do grupo
 %---------------------------------------------------------------------
+\chapter{Componentes do grupo}
+\label{componentes-grupo}
 
-\phantompart
-
-\printindex
-
-%---------------------------------------------------------------------
-% Formulário de Identificação (opcional)
-%---------------------------------------------------------------------
-\chapter*[Formulário de Identificação]{Formulário de Identificação}
-\addcontentsline{toc}{chapter}{Exemplo de Formulário de Identificação}
-\label{formulado-identificacao}
-
-Exemplo de Formulário de Identificação, compatível com o Anexo A (informativo)
-da ABNT NBR 10719:2015. Este formulário não é um anexo. Conforme definido na
-norma, ele é o último elemento pós-textual e opcional do relatório.
+\textbf{Componentes do grupo}
 
 \bigskip
 
-\begin{tabular}{|p{9cm}|p{5cm}|}
+\small
+\begin{tabularx}{\textwidth}{|p{1.7cm}|>{\raggedright\arraybackslash}X|p{3.2cm}|p{3cm}|p{2.2cm}|}
 \hline
-\multicolumn{2}{|c|}{\textbf{\large Dados do Relatório Técnico e/ou científico}}\\
+\textbf{No. de inscrição} & \textbf{Nome} & \textbf{Título profissional} & \textbf{Função no grupo} & \textbf{Assinatura} \\
 \hline
-\multirow{4}{10cm}[24pt]{Título e subtítulo}& Classificação de segurança\\
-                   & \\
-                   \cline{2-2}
-                   & No.\\
-                   & \\
-				
+06 & Cícero Santos Melo & & Pesquisador & \\
 \hline
-Tipo de relatório & Data\\
+30 & Ivan Lacava Júnior & & Pesquisador & \\
 \hline
-Título do projeto/programa/plano & No.\\
+16 & Góis Polícia Civil & & Pesquisador & \\
 \hline
-\multicolumn{2}{|l|}{Autor(es)} \\
+20 & Márcio Bontempo & & Pesquisador & \\
 \hline
-\multicolumn{2}{|l|}{Instituição executora e endereço completo} \\
+23 & Marcos Roberto Silva & & Pesquisador & \\
 \hline
-\multicolumn{2}{|l|}{Instituição patrocinadora e endereço completo} \\
+26 & Pedro Octavio de Souza Barros & & Pesquisador & \\
 \hline
-\multicolumn{2}{|l|}{Resumo}\\[3cm]
-\hline
-\multicolumn{2}{|l|}{Palavras-chave/descritores}\\
-\hline
-\multicolumn{2}{|l|}{
-Edição \hfill No. de páginas \hfill No. do volume \hfill Nº de classificação \phantom{XXXX}} \\
-\hline
-\multicolumn{2}{|l|}{
-ISSN \hfill \hfill Tiragem \hfill Preço \phantom{XXXXXXXX}} \\
-\hline
-\multicolumn{2}{|l|}{Distribuidor} \\
-\hline
-\multicolumn{2}{|l|}{Observações/notas}\\[3cm]
-\hline
-\end{tabular}
+\end{tabularx}
 
 \end{document}
