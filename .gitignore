@@ -330,3 +330,5 @@ TSWLatexianTemp*
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
 doc/tcc-grupo3-charlie.loq
+src/dados_comex/EXP_2023.csv
+src/dados_comex/IMP_2023.csv

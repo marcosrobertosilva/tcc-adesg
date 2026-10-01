@@ -1,4 +1,5 @@
 import io
+import os
 import requests
 import pandas as pd
 import numpy as np
@@ -100,33 +101,112 @@ def baixar_abate_ibge(ano: int = 2023) -> pd.DataFrame:
         ])
 
 
+def _baixar_com_resume(url: str, verify, timeout: int = 60, max_tentativas: int = 10) -> bytes:
+    """
+    Baixa uma URL em bytes, retomando via cabeçalho Range quando a conexão é
+    interrompida antes do fim (o servidor do MDIC costuma truncar arquivos grandes).
+    """
+    buffer = bytearray()
+    total_esperado = None
+
+    for _ in range(max_tentativas):
+        headers = {"Range": f"bytes={len(buffer)}-"} if buffer else {}
+        with requests.get(url, timeout=timeout, verify=verify, headers=headers, stream=True) as response:
+            response.raise_for_status()
+            if total_esperado is None:
+                content_range = response.headers.get("Content-Range", "")
+                total_esperado = int(content_range.split("/")[-1]) if "/" in content_range else int(
+                    response.headers.get("Content-Length", 0)
+                ) + len(buffer)
+            try:
+                for chunk in response.iter_content(chunk_size=1024 * 1024):
+                    buffer.extend(chunk)
+            except (requests.exceptions.ChunkedEncodingError, requests.exceptions.ConnectionError):
+                continue  # tenta retomar do ponto onde parou
+
+        if total_esperado and len(buffer) >= total_esperado:
+            break
+
+    return bytes(buffer)
+
+
 def baixar_comex_stat(ano: int = 2023) -> pd.DataFrame:
     """
     Baixa e filtra diretamente os microdados abertos de Comércio Exterior (MDIC/SECEX)
     para o Estado de São Paulo (SG_UF_NCM == 'SP').
+
+    O servidor balanca.mdic.gov.br envia apenas o certificado-folha (emitido pela
+    AC SERPRO, parte da ICP-Brasil) sem a cadeia intermediária, e essa AC não
+    pertence às cadeias de confiança públicas (Mozilla/SO). Por padrão a
+    verificação TLS (verify=True) é mantida; para validar corretamente contra a
+    ICP-Brasil, defina COMEX_CA_BUNDLE com um bundle de CA obtido e conferido por
+    você junto ao repositório oficial
+    (https://www.gov.br/iti/pt-br/assuntos/repositorio/ac-serpro-de-1deg-nivel).
+    Alternativamente, defina COMEX_SKIP_TLS_VERIFY=1 para desativar a verificação
+    TLS (inseguro: remove a proteção contra man-in-the-middle; use por sua conta e risco).
+
+    O servidor também costuma truncar arquivos grandes no meio da conexão; por isso
+    o download é feito com retomada via Range (ver _baixar_com_resume).
+
+    Antes de baixar, verifica se o CSV já existe em DADOS_COMEX_DIR (pasta
+    "dados_comex" por padrão); se existir, usa o arquivo local e pula o download.
     """
     print(f"[3/4] Baixando microdados de Comércio Exterior (Comex Stat - {ano})...")
     comex_dfs = []
+    ca_bundle = os.environ.get("COMEX_CA_BUNDLE")  # caminho opcional para bundle da ICP-Brasil, definido pelo usuário
+    skip_tls_verify = os.environ.get("COMEX_SKIP_TLS_VERIFY") == "1"
+    if skip_tls_verify:
+        requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
+        print("   ⚠ COMEX_SKIP_TLS_VERIFY=1: verificação TLS desativada para balanca.mdic.gov.br (inseguro).")
+    verify = False if skip_tls_verify else (ca_bundle or True)
+
+    dados_dir = os.environ.get(
+        "DADOS_COMEX_DIR",
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "dados_comex")
+    )
     
-    # URLs oficiais dos arquivos CSV abertos do MDIC
-    urls = {
-        "Exportacao": f"https://balanca.mdic.gov.br/balanca/bd/comexstat-bd/ncm/EXP_{ano}.csv",
-        "Importacao": f"https://balanca.mdic.gov.br/balanca/bd/comexstat-bd/ncm/IMP_{ano}.csv"
+    # URLs oficiais dos arquivos CSV abertos do MDIC, com o respectivo arquivo local esperado
+    fluxos = {
+        "Exportacao": {
+            "url": f"https://balanca.mdic.gov.br/balanca/bd/comexstat-bd/ncm/EXP_{ano}.csv",
+            "arquivo_local": os.path.join(dados_dir, f"EXP_{ano}.csv"),
+        },
+        "Importacao": {
+            "url": f"https://balanca.mdic.gov.br/balanca/bd/comexstat-bd/ncm/IMP_{ano}.csv",
+            "arquivo_local": os.path.join(dados_dir, f"IMP_{ano}.csv"),
+        },
     }
     
-    for fluxo, url in urls.items():
+    for fluxo, info in fluxos.items():
         try:
-            print(f"   -> Baixando arquivo CSV de {fluxo}...")
-            response = requests.get(url, timeout=60)
-            response.raise_for_status()
+            arquivo_local = info["arquivo_local"]
+            if os.path.isfile(arquivo_local):
+                print(f"   -> Usando arquivo local de {fluxo} ({arquivo_local})...")
+                with open(arquivo_local, "rb") as f:
+                    conteudo = f.read()
+            else:
+                print(f"   -> Baixando arquivo CSV de {fluxo}...")
+                conteudo = _baixar_com_resume(info["url"], verify=verify, timeout=60)
             
-            # Leitura otimizada carregando apenas colunas necessárias
+            # Leitura tolerante a linhas malformadas (o arquivo do MDIC já veio com
+            # algumas linhas corrompidas por download; essas são descartadas com aviso)
+            n_linhas_antes = conteudo.count(b"\n")
             df = pd.read_csv(
-                io.BytesIO(response.content),
+                io.BytesIO(conteudo),
                 sep=";",
                 usecols=["CO_NCM", "SG_UF_NCM", "KG_LIQUIDO"],
-                dtype={"CO_NCM": str, "SG_UF_NCM": str, "KG_LIQUIDO": float}
+                dtype={"CO_NCM": str, "SG_UF_NCM": str},
+                on_bad_lines="skip",
+                engine="python"
             )
+            df["KG_LIQUIDO"] = pd.to_numeric(df["KG_LIQUIDO"], errors="coerce")
+            n_invalidas = df["KG_LIQUIDO"].isna().sum()
+            if n_invalidas:
+                print(f"      ⚠ {n_invalidas:,} linha(s) com KG_LIQUIDO inválido descartada(s) em {fluxo}.")
+                df = df.dropna(subset=["KG_LIQUIDO"])
+            n_descartadas_parse = n_linhas_antes - 1 - len(df) - n_invalidas
+            if n_descartadas_parse > 0:
+                print(f"      ⚠ {n_descartadas_parse:,} linha(s) malformada(s) descartada(s) em {fluxo} (considere baixar o arquivo novamente).")
             
             # Filtragem exclusiva para o Estado de São Paulo
             df_sp = df[df["SG_UF_NCM"] == "SP"].copy()
@@ -138,7 +218,7 @@ def baixar_comex_stat(ano: int = 2023) -> pd.DataFrame:
             print(f"      ✓ {fluxo} para SP filtrada ({len(df_sp):,} registros).")
             
         except Exception as e:
-            print(f"      ⚠ Download direto de {fluxo} falhou. Aplicando mock calibrado. Erro: {e}")
+            print(f"      ⚠ Falha ao processar {fluxo}. Aplicando mock calibrado. Erro: {e}")
             # Mock de contingência em caso de alteração no servidor do MDIC
             mock_data = pd.DataFrame([
                 {"ncm_posicao": "1006", "SG_UF_NCM": "SP", "KG_LIQUIDO": 120000000 if fluxo=="Importacao" else 5000000, "flow": fluxo},
