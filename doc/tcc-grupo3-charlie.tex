@@ -32,8 +32,13 @@
 \usepackage{microtype}
 \usepackage{tabularx}
 \usepackage{float}
-\newfloat{quadro}{htb}{loq}[chapter]
+\floatstyle{plaintop}
+\newfloat{quadro}{htb}{loq}
 \floatname{quadro}{Quadro}
+\makeatletter
+% Legenda e lista de quadros no padrão ABNT, igual ao das tabelas: "Quadro 1 – título"
+\renewcommand\floatc@plain[2]{\centering\@fs@cfont #1 \textendash\ #2\par}
+\makeatother
 
 % ---
 % Pacotes adicionais
@@ -398,7 +403,13 @@ supply-demand balance. SWOT analysis. State of São Paulo.
 % inserir lista de quadros
 % ---
 \pdfbookmark[0]{Lista de Quadros}{loq}
-\listof{quadro}{Lista de Quadros}
+\makeatletter
+\float@listhead{Lista de Quadros}
+\begingroup\setlength{\parskip}{\z@}
+\def\l@quadro#1#2{\begingroup\def\numberline##1{Quadro~##1\ \textendash\ }\l@table{#1}{#2}\endgroup}
+\@starttoc{loq}
+\endgroup
+\makeatother
 \cleardoublepage
 % ---
 
