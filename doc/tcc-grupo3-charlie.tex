@@ -140,7 +140,44 @@ Estudos de Política e Estratégia, 69a. turma.}
 % compila o indice
 % ---
 \makeindex
+
+% Qualificadores mantidos em caixa mista nas referências (autores institucionais)
+\newcommand{\estado}{(Estado)}
+\newcommand{\brasilp}{(Brasil)}
+% Partícula "da" nas iniciais de autor (evita "d." e o ponto duplo)
+\def\eatdot.{}
+\def\bibda{da\aftergroup\eatdot}
 % ---
+
+% ---
+% Capa conforme a Norma ADESG-SP N-001/21, item 5.2 e ANEXO III
+% (fonte Arial, tamanho 26)
+% ---
+\newcommand{\cepenumero}{LXIX}
+\newcommand{\cepeano}{2026}
+\newcommand{\cepegrupo}{III}
+\renewcommand{\imprimircapa}{%
+\begin{capa}%
+\fontfamily{phv}\selectfont
+\centering
+\includegraphics[width=3.6cm]{adesg-logo.png}\par
+\vspace*{0.6cm}
+{\fontsize{26}{31}\selectfont Associação dos Diplomados\par da\par Escola Superior de Guerra\par}
+\vspace*{0.8cm}
+{\fontsize{26}{31}\selectfont Delegacia no Estado de São Paulo\par}
+\vspace*{0.6cm}
+{\fontsize{26}{31}\selectfont São Paulo\par}
+\vspace*{0.5cm}
+\setlength{\fboxsep}{0pt}%
+\renewcommand{\arraystretch}{1.3}%
+\begin{tabular}{|p{0.68\textwidth}|>{\centering\arraybackslash}p{0.24\textwidth}|}
+\hline
+\multicolumn{1}{|c|}{\fontsize{26}{31}\selectfont \cepenumero\ CEPE -- \cepeano} & {\fontsize{18}{22}\selectfont Grupo \cepegrupo} \\
+\hline
+\multicolumn{2}{|>{\centering\arraybackslash}p{0.94\textwidth}|}{\rule{0pt}{1.1cm}\fontsize{26}{31}\selectfont Segurança Alimentar e Agronegócio Sustentável no Estado de São Paulo\par\vspace{0.6cm}} \\
+\hline
+\end{tabular}
+\end{capa}}
 
 % ----
 % Início do documento
@@ -299,8 +336,8 @@ exequibilidade e à aceitabilidade, propõe-se a opção Resiliência Inclusiva:
 expansão focalizada do Bom Prato e das cozinhas solidárias nos territórios de
 maior pobreza do Cadastro Único, compras públicas da agricultura familiar com
 45\% no Programa Nacional de Alimentação Escolar (PNAE), estoques regionais de 15 dias de arroz e feijão, integração de
-dados, protocolos de contingência e segurança da cadeia, sob um comitê
-intersetorial com indicadores e metas para 2028 e 2030.
+dados, protocolos de contingência e segurança da cadeia, sob a CAISAN-SP e seu
+grupo executivo, com indicadores e metas para 2028 e 2030.
 
 \noindent
 \textbf{Palavras-chave}: segurança alimentar e nutricional. agronegócio sustentável.
@@ -330,7 +367,8 @@ suitability, feasibility and acceptability, the Inclusive Resilience option is
 proposed: targeted expansion of subsidized restaurants and community kitchens in
 the poorest areas, public procurement from family farming with 45\% in school
 meals, regional 15-day stocks of rice and beans, data integration, contingency
-protocols and supply-chain security, under an intersectoral committee with
+protocols and supply-chain security, under the State Intersecretarial Chamber
+for Food and Nutrition Security (CAISAN-SP), with
 indicators and targets for 2028 and 2030.
 
 \noindent
@@ -376,13 +414,17 @@ strategic planning. supply-demand balance. State of São Paulo.
 \begin{siglas}
 	\item[AE] Ação Estratégica
 	\item[APTA] Agência Paulista de Tecnologia dos Agronegócios
+	\item[CadInsan] Indicador de risco de insegurança alimentar municipal a partir dos dados do CadÚnico
 	\item[CadÚnico] Cadastro Único para Programas Sociais
+	\item[CAISAN-SP] Câmara Intersecretarial de Segurança Alimentar e Nutricional do Estado de São Paulo
+	\item[CATI] Coordenadoria de Assistência Técnica Integral
 	\item[CEAGESP] Companhia de Entrepostos e Armazéns Gerais de São Paulo
 	\item[CF] Constituição Federal
 	\item[CNPE] Conselho Nacional de Política Energética
 	\item[CONAB] Companhia Nacional de Abastecimento
 	\item[CONSEA-SP] Conselho Estadual de Segurança Alimentar e Nutricional Sustentável
 	\item[CRAS] Centro de Referência de Assistência Social
+	\item[CRSANS] Comissões Regionais de Segurança Alimentar e Nutricional Sustentável
 	\item[DIEESE] Departamento Intersindical de Estatística e Estudos Socioeconômicos
 	\item[EBIA] Escala Brasileira de Insegurança Alimentar
 	\item[EC] Emenda Constitucional
@@ -417,13 +459,17 @@ strategic planning. supply-demand balance. State of São Paulo.
 	\item[OE; OG; OF] Objetivo de Estado; de Governo; Fundamental
 	\item[PAA] Programa de Aquisição de Alimentos
 	\item[PAM] Pesquisa Agrícola Municipal
+	\item[PEAPO] Política Estadual de Agroecologia e Produção Orgânica
 	\item[PIB] Produto Interno Bruto
+	\item[PLANSAN/SP] Plano Paulista de Segurança Alimentar e Nutricional
+	\item[PLEAPO] Plano Estadual de Agroecologia e Produção Orgânica
 	\item[PNAD] Pesquisa Nacional por Amostra de Domicílios
 	\item[PNAE] Programa Nacional de Alimentação Escolar
 	\item[POF] Pesquisa de Orçamentos Familiares
 	\item[PPA; LOA] Plano Plurianual; Lei Orçamentária Anual
 	\item[PPAIS] Programa Paulista da Agricultura de Interesse Social
 	\item[SAA; SEDS] Secretarias de Agricultura e Abastecimento; de Desenvolvimento Social
+	\item[SAN] Segurança Alimentar e Nutricional
 	\item[SEFAZ; SEMIL] Secretarias da Fazenda e Planejamento; de Meio Ambiente, Infraestrutura e Logística
 	\item[SISAN] Sistema Nacional de Segurança Alimentar e Nutricional
 	\item[SP] São Paulo
@@ -503,13 +549,18 @@ renda. Por isso, a análise considera a segurança do abastecimento (\textit{foo
 security}), a inocuidade (\textit{food safety}) e a proteção contra atos
 intencionais (\textit{food defense}) \cite[p. 48]{perez2018}.
 
-A alimentação adequada é condição do Bem Comum, ``síntese dos Objetivos
-Nacionais'' \cite[p. 19]{esg_fpn2024}, e componente da Segurança e do
-Desenvolvimento Nacionais: a fome figura entre os óbices de natureza social
-ao Poder Nacional \cite[p. 42]{esg_fpn2024}. O tema vincula-se aos Objetivos
-Fundamentais da República de erradicar a pobreza e reduzir as desigualdades
-(CF, art. 3º, III) e de garantir o desenvolvimento nacional (art. 3º, II), e ao
-direito social à alimentação (art. 6º) \cite{brasil1988}. No plano
+A alimentação adequada é direito social (art. 6º da Constituição Federal -- CF;
+\citeauthor{brasil1988}, \citeyear{brasil1988}) e direito humano que o poder
+público deve respeitar, proteger, promover e prover (art. 2º da Lei Orgânica de
+Segurança Alimentar e Nutricional -- LOSAN; \citeauthor{brasil2006b},
+\citeyear{brasil2006b}). Na perspectiva da ESG, é também condição do Bem Comum,
+``síntese dos Objetivos Nacionais'' \cite[p. 19]{esg_fpn2024}, e componente da
+Segurança e do Desenvolvimento Nacionais: a fome figura entre os óbices de
+natureza social ao Poder Nacional \cite[p. 42]{esg_fpn2024}. A segurança das
+cadeias de abastecimento é, portanto, meio; a realização do direito humano à
+alimentação adequada é o fim. O tema vincula-se aos Objetivos Fundamentais da
+República de erradicar a pobreza e reduzir as desigualdades (CF, art. 3º, III)
+e de garantir o desenvolvimento nacional (art. 3º, II) \cite{brasil1988}. No plano
 internacional, o ODS 2 propõe acabar com a fome até 2030
 \cite{onu2015,onu_ods2}.
 
@@ -542,11 +593,19 @@ a todos os entes ``fomentar a produção agropecuária e organizar o abastecimen
 alimentar'' \cite{brasil1988}, da LOSAN, cujo art. 2º, § 2º, impõe ao poder
 público ``respeitar, proteger, promover, prover, informar, monitorar,
 fiscalizar e avaliar'' a realização do direito humano à alimentação adequada
-\cite{brasil2006b}, e do Decreto n. 7.272/2010, que disciplina a adesão dos
+\cite{brasil2006b}, e do Decreto nº 7.272/2010, que disciplina a adesão dos
 entes ao Sistema Nacional de Segurança Alimentar e Nutricional (SISAN)
 \cite{brasil2010sisan}. Ficam fora da alçada estadual a política federal de
 renda, o câmbio, os preços internacionais e os estoques federais, o que exige
-ações de articulação federativa.
+ações de articulação federativa. No âmbito do SISAN, ao qual São Paulo aderiu
+em dezembro de 2013, o Governador conta com duas instâncias formais: a Câmara
+Intersecretarial de Segurança Alimentar e Nutricional (CAISAN-SP), instituída
+pelo Decreto nº 59.385/2013 e presidida pelo Secretário de Agricultura e
+Abastecimento, à qual cabe elaborar a Política e o Plano Estadual de SAN
+\cite{saopaulo2013caisan}; e o Conselho Estadual de Segurança Alimentar e
+Nutricional Sustentável (CONSEA-SP), órgão consultivo reorganizado pelo Decreto
+nº 59.146/2013, com dois terços de representantes da sociedade civil e 16
+Comissões Regionais (CRSANS) \cite{saopaulo2013consea}.
 
 \textbf{Delimitação.} O sistema estudado é o sistema alimentar paulista. O
 ambiente interno compreende o que está sob governabilidade do Estado e dos
@@ -557,7 +616,13 @@ analítico é o prato feito (arroz, feijão, proteína, guarnição e salada), d
 o balanço cobre seis grupos com dados oficiais compatíveis (arroz, feijão,
 carne bovina, frango, laranja e soja/óleo); trigo, ovos, leite, batata e
 hortaliças ficaram fora por falta de compatibilização entre produção, comércio
-e aquisição. O horizonte é 2027--2030, um mandato estadual, coincidente com a
+e aquisição. Esses itens, sobretudo hortaliças e frutas \textit{in natura}, são
+os mais sensíveis a choques climáticos e os mais presentes nas compras da
+agricultura familiar (Programa Nacional de Alimentação Escolar -- PNAE -- e
+Programa Paulista da Agricultura de Interesse Social -- PPAIS); seu
+abastecimento deve ser acompanhado por dados de entreposto (CEAGESP) e da SAA
+(IEA e Coordenadoria de Assistência Técnica Integral -- CATI), e não pelo
+balanço anual. O horizonte é 2027--2030, um mandato estadual, coincidente com a
 Agenda 2030; para os OE, 2035. Não se avaliam condições clínicas individuais nem
 propriedades isoladas. Os autores atuam como Equipe de Planejamento
 multidisciplinar (policiais militar e civil, procurador, engenheiro, empresário
@@ -622,13 +687,17 @@ na trajetória paulista.
 \hline
 1969 & Criação da CEAGESP, entreposto central do atacado paulista \cite{ceagesp_historico}. & I & E & Origem da concentração do abastecimento hortifrutícola na capital. \\
 \hline
-1988--2010 & Constituição Federal; alimentação como direito social (EC n. 64/2010) \cite{brasil1988}. & E & P & Fundamento do dever estatal de garantir o acesso. \\
+1988--2010 & Constituição Federal; alimentação como direito social (EC nº 64/2010) \cite{brasil1988}. & E & P & Fundamento do dever estatal de garantir o acesso. \\
 \hline
 1993; 2000 & Programas estaduais Vivaleite e Bom Prato \cite{iea_vivaleite,governo_sp_bomprato2025}. & I & Ps & Base dos equipamentos públicos de acesso. \\
 \hline
-2006--2009 & LOSAN e SISAN; Lei n. 11.326/2006 (agricultura familiar); PNAE (Lei n. 11.947/2009) (\citeauthor{brasil2006a}, \citeyear{brasil2006a}, \citeyear{brasil2006b}, \citeyear{brasil2009}). & E & P & Marco do direito à alimentação e das compras públicas da agricultura familiar. \\
+2003; 2013 & CONSEA-SP criado (Decreto nº 47.763/2003) e reorganizado (Decreto nº 59.146/2013) \cite{saopaulo2013consea}. & I & P & Instância de participação e controle social da política estadual. \\
 \hline
-2011 & Programa Paulista da Agricultura de Interesse Social -- PPAIS (Lei estadual n. 14.591/2011) \cite{saopaulo2011ppais}. & I & P/E & Instrumento estadual de compras da agricultura familiar. \\
+2006--2009 & LOSAN e SISAN; Lei nº 11.326/2006 (agricultura familiar); PNAE (Lei nº 11.947/2009) (\citeauthor{brasil2006a}, \citeyear{brasil2006a}, \citeyear{brasil2006b}, \citeyear{brasil2009}). & E & P & Marco do direito à alimentação e das compras públicas da agricultura familiar. \\
+\hline
+2011 & Programa Paulista da Agricultura de Interesse Social -- PPAIS (Lei estadual nº 14.591/2011) \cite{saopaulo2011ppais}. & I & P/E & Instrumento estadual de compras da agricultura familiar. \\
+\hline
+2013 & CAISAN-SP (Decreto nº 59.385/2013) e adesão de São Paulo ao SISAN \cite{saopaulo2013caisan}. & I & P & Instância intersecretarial responsável pelo Plano Estadual de SAN. \\
 \hline
 2014--2015 & Crise hídrica no Estado de São Paulo. & I & E/M & Expôs a vulnerabilidade hídrica da produção e do abastecimento. \\
 \hline
@@ -636,13 +705,15 @@ na trajetória paulista.
 \hline
 2018 & Greve nacional dos caminhoneiros, com desabastecimento. & E/I & M/E & Revelou a dependência rodoviária do abastecimento. \\
 \hline
-2019 & Lei n. 13.839/2019 inclui os estoques reguladores e estratégicos na LOSAN \cite{brasil2019estoques}. & E & P & Base para estoques públicos de alimentos. \\
+2018--2023 & I Plano Paulista de SAN (PLANSAN/SP 2019--2023): 9 desafios, 60 objetivos e 147 metas \cite{saopaulo2018plansan}. & I & P/Ps & Antecedente direto do plano estadual; base para avaliar o que foi cumprido. \\
+\hline
+2019 & Lei nº 13.839/2019 inclui os estoques reguladores e estratégicos na LOSAN \cite{brasil2019estoques}. & E & P & Base para estoques públicos de alimentos. \\
 \hline
 2021--2025 & Retorno do Brasil ao Mapa da Fome e saída em 2025 \cite{fao_sofi2025}. & E & Ps & Reversibilidade dos avanços no acesso. \\
 \hline
 2022 & Guerra Rússia--Ucrânia e Plano Nacional de Fertilizantes \cite{fao2022ukraine,brasil2022fertilizantes}. & E & E/CT & Choque de custos e dependência de NPK. \\
 \hline
-2023--2025 & Lei n. 14.628/2023 (PAA e Cozinha Solidária) e Lei n. 15.226/2025 (PNAE) (\citeauthor{brasil2023paa}, \citeyear{brasil2023paa}, \citeyear{brasil2025pnae}). & E & P & Ampliação das compras públicas da agricultura familiar. \\
+2023--2025 & Lei nº 14.628/2023 (PAA e Cozinha Solidária) e Lei nº 15.226/2025 (PNAE) (\citeauthor{brasil2023paa}, \citeyear{brasil2023paa}, \citeyear{brasil2025pnae}). & E & P & Ampliação das compras públicas da agricultura familiar. \\
 \hline
 Atualidade & Expansão da cana e do eucalipto; pressão urbana sobre o cinturão verde \cite{iea_sp_2023}. & I & E & Disputa por terra com a produção de alimentos. \\
 \hline
@@ -741,7 +812,10 @@ sinal em todas as combinações da análise de sensibilidade e são, portanto,
 estruturais; os de carne bovina e frango mudam de sinal e devem ser lidos como
 indeterminados; laranja e soja/óleo são excedentes robustos. Os saldos não se
 somam, porque os produtos não são intercambiáveis, e indicam necessidade de
-entradas interestaduais, não déficit alimentar do Estado. A dependência de
+entradas interestaduais, não déficit alimentar do Estado. Em condições normais,
+não há falta física desses produtos no varejo paulista; a vulnerabilidade está
+na dependência do transporte rodoviário interestadual e na transmissão de
+choques de preço das regiões produtoras. A dependência de
 arroz e feijão fundamenta a necessidade de estoques públicos regionais e de
 acordos com as unidades fornecedoras (seção 1.2.2). Como limites, a POF mede
 aquisição domiciliar, e não ingestão; a população é de 2024 e a produção, de
@@ -797,7 +871,7 @@ Com insegurança alimentar & 3.337 & 19,3 & 9.209 & 20,0 \\
 \hline
 \end{tabularx}
 \fonte{elaborado pelos autores com base em \citeonline{ibge_pnadc2024a}, PNAD Contínua Anual, 4º trimestre, Tabela 9552.}
-\nota{Situação do domicílio -- total. Participações calculadas pelos autores; as parcelas podem não somar os totais por arredondamento.}
+\nota{Situação do domicílio -- total. Participações calculadas pelos autores; as parcelas podem não somar os totais por arredondamento. A população da Tabela 2 (46,063 milhões, expansão da PNAD Contínua) difere da usada no balanço da Tabela 1 (45.973.194 habitantes, projeção populacional) por se tratar de fontes distintas.}
 \end{table}
 
 As formas moderada e grave, que indicam redução efetiva da quantidade de
@@ -808,10 +882,16 @@ de paulistas em privação severa. Esse é o público-alvo prioritário do plano
 Para focalizá-lo, o plano empregará três informações: o custo da cesta
 básica em São Paulo e sua relação com o salário mínimo, apurados pelo DIEESE
 \cite{dieese_cesta}; o perfil dos domicílios em IA grave (sexo e cor da pessoa
-de referência, presença de menores e renda), segundo a PNAD/EBIA; e a
-distribuição territorial das famílias em extrema pobreza no Cadastro Único
-(CadÚnico) por região administrativa, base da definição dos territórios
-prioritários. Esses dados complementam o balanço: os déficits de
+de referência, presença de menores e renda), segundo a PNAD/EBIA; e o
+CadInsan, indicador do MDS que estima o risco de insegurança alimentar grave
+das famílias do Cadastro Único (CadÚnico) por município \cite{mds_cadinsan2025}.
+Em janeiro de 2024, 244.132 das 2.725.224 famílias paulistas com cadastro
+atualizado (9,0\%) estavam em risco. Em número absoluto, a capital (76.970) e
+Guarulhos (12.012) lideram; em proporção, Bertioga (16,6\%), São Vicente
+(15,7\%), Peruíbe (14,8\%), Itapecerica da Serra (14,4\%) e Embu das Artes
+(14,3\%); ao todo, 53 municípios superam 10\%. Por ser modelo estatístico
+restrito ao CadÚnico, o CadInsan orienta a definição dos territórios
+prioritários, mas não substitui a EBIA como medida da meta. Esses dados complementam o balanço: os déficits de
 arroz e feijão indicam dependência de abastecimento, enquanto a IA domiciliar
 reflete sobretudo restrições de renda. A resposta deve articular as duas
 dimensões.
@@ -839,17 +919,17 @@ apresenta em ordem e datados.
 \hline
 1 & fev. 2022 & Início da guerra Rússia--Ucrânia, com alta de fertilizantes, grãos e energia \cite{fao2022ukraine}. & E/P \\
 \hline
-2 & mar. 2022 & Decreto n. 10.991/2022 institui o Plano Nacional de Fertilizantes \cite{brasil2022fertilizantes}. & P/E \\
+2 & mar. 2022 & Decreto nº 10.991/2022 institui o Plano Nacional de Fertilizantes \cite{brasil2022fertilizantes}. & P/E \\
 \hline
 3 & 2021; 2024 & Geadas em áreas agrícolas paulistas (2021) e estiagem com queimadas no interior (2024). & E \\
 \hline
 4 & maio 2018 & Greve nacional dos caminhoneiros, com desabastecimento de alimentos. & M/E \\
 \hline
-5 & 2023; 2025 & Lei n. 14.628/2023 (PAA e Cozinha Solidária) e Lei n. 15.226/2025, que eleva a 45\% o mínimo de compras da agricultura familiar no PNAE a partir de 2026 (\citeauthor{brasil2023paa}, \citeyear{brasil2023paa}, \citeyear{brasil2025pnae}). & P \\
+5 & 2023; 2025 & Lei nº 14.628/2023 (PAA e Cozinha Solidária) e Lei nº 15.226/2025, que eleva a 45\% o mínimo de compras da agricultura familiar no PNAE a partir de 2026 (\citeauthor{brasil2023paa}, \citeyear{brasil2023paa}, \citeyear{brasil2025pnae}). & P \\
 \hline
 6 & 2023 & Divulgação do Censo 2022: 15,6\% da população brasileira com 60 anos ou mais \cite{ibge_censo2022}. & Ps \\
 \hline
-7 & maio 2020 & Decreto n. 10.375/2020 institui o Programa Nacional de Bioinsumos \cite{brasil2020bioinsumos}. & CT \\
+7 & maio 2020 & Decreto nº 10.375/2020 institui o Programa Nacional de Bioinsumos \cite{brasil2020bioinsumos}. & CT \\
 \hline
 8 & 2024--2025 & Lei do Combustível do Futuro e elevação da mistura obrigatória de etanol na gasolina. & E \\
 \hline
@@ -919,7 +999,7 @@ fitossanitária cabe aos órgãos civis.
 \hline
 \textbf{TP} & \textbf{Tendência} & \textbf{Indicador e série} & \textbf{Expressões} \\
 \hline
-TP1 & Urbanização e concentração metropolitana & Cerca de 96\% da população paulista em área urbana (Censo 2010) \cite{ibge_censo2010}. & P, E, Ps, M \\
+TP1 & Urbanização e concentração metropolitana & Taxa de urbanização paulista acima de 95\% desde os anos 2010 e de 96,8\% em 2022 (Censo 2022) \cite{baptistella2026} & P, E, Ps, M \\
 \hline
 TP2 & Procura por refeições prontas e ultraprocessados & Ultraprocessados: 16,0\% (2008--2009) para 18,4\% (2017--2018) das calorias adquiridas no Brasil \cite{ibge_pof_2018}. & E, Ps \\
 \hline
@@ -973,11 +1053,13 @@ At6 Setor sucroenergético, celulose e agroexportador & Rentabilidade e uso da t
 \hline
 At7 Atacado, varejo, logística e importadores de insumos & Margens e previsibilidade & Distribuição, armazéns, fretes & Neutro \\
 \hline
-At8 Consumidores vulneráveis e organizações da sociedade civil (CONSEA-SP) & Acesso a alimentos adequados & Mobilização e controle social & Aliado \\
+At8 Consumidores vulneráveis e organizações da sociedade civil & Acesso a alimentos adequados & Mobilização e controle social & Aliado \\
 \hline
 At9 Pesquisa e extensão (APTA/IAC, Embrapa, universidades) & Inovação e difusão & Conhecimento, ensaios, extensão & Aliado \\
 \hline
 At10 Defesa Civil, SSP e Forças Armadas & Ordem pública e resposta a desastres & Efetivos, logística, inteligência & Aliado \\
+\hline
+At11 Instâncias do SISAN-SP (CAISAN-SP e CONSEA-SP/CRSANS) & Coordenar a política e exercer o controle social & Plano Estadual de SAN, conferências, adesão municipal & Aliado \\
 \hline
 Crime organizado (roubo de cargas) & Lucro ilícito & Violência e receptação & Antagonista \\
 \hline
@@ -988,8 +1070,8 @@ Crime organizado (roubo de cargas) & Lucro ilícito & Violência e receptação 
 Em relação ao agrupamento anterior, separaram-se o setor sucroenergético e de
 celulose (At6), que disputa terra com a produção de alimentos, e os
 consumidores vulneráveis (At8), cujo interesse difere do varejo (At7), e
-incluíram-se os órgãos de controle (At2) e o sistema de defesa e segurança
-(At10). As convergências mais promissoras envolvem integração de dados,
+incluíram-se os órgãos de controle (At2), o sistema de defesa e segurança
+(At10) e as instâncias do SISAN-SP (At11). As convergências mais promissoras envolvem integração de dados,
 resposta a emergências e compras públicas; as divergências, a distribuição de
 custos, o uso da terra, a formação de estoques e a priorização entre cadeias
 exportadoras e alimentos para o mercado interno. A articulação política deverá
@@ -1062,7 +1144,7 @@ e pressiona os preços do prato feito (D8).
 \hline
 \textbf{Oportunidades (ambiente externo)} & \textbf{Ameaças (ambiente externo)} \\
 \hline
-O1 Lei n. 14.628/2023 e PNAE com 45\% de agricultura familiar (P, 3) \newline
+O1 Lei nº 14.628/2023 e PNAE com 45\% de agricultura familiar (P, 3) \newline
 O2 Plano Nacional de Fertilizantes e Programa de Bioinsumos (CT, 2) \newline
 O3 Financiamento climático e crédito rural federal (E, 2) \newline
 O4 Tecnologias digitais, de rastreabilidade e georreferenciamento (CT, 2) \newline
@@ -1169,7 +1251,9 @@ e Militar: a população em IA grave e a dependência rodoviária estão exposta
 alta de preços e às interrupções logísticas. Nesse quadrante, a MPE recomenda
 medidas firmes e imediatas de proteção e a busca de apoio por parcerias e
 acordos \cite[p. 60]{esg_mpe2026}. Seguem-se o Reforço (Política), a Dissuasão
-(Econômica) e o Crescimento (Científico-tecnológica).
+(Econômica) e o Crescimento (Científico-tecnológica). Na tradução para os
+instrumentos do SISAN, o vetor Defesa corresponde à proteção social e à
+resiliência do abastecimento, sem conotação militar.
 
 \textbf{Efeitos dos entrecruzamentos.} Os deslocamentos pretendidos são: na
 Psicossocial, de Defesa para Dissuasão, pela proteção do acesso (equipamentos
@@ -1284,24 +1368,28 @@ programas em relação ao problema.
 \hline
 \textbf{Plano ou programa} & \textbf{Esfera e base legal} & \textbf{Objetivo e cobertura} & \textbf{Avaliação: resultados e lacunas} \\
 \hline
-PNAE & Federal; Lei n. 11.947/2009, art. 14, com redação da Lei n. 15.226/2025 & Alimentação escolar na educação básica; mínimo de 45\% de compras da agricultura familiar desde 2026 & Cobertura universal; lacuna: cumprimento do percentual nos municípios paulistas. \\
+PNAE & Federal; Lei nº 11.947/2009, art. 14, com redação da Lei nº 15.226/2025 & Alimentação escolar na educação básica; mínimo de 45\% de compras da agricultura familiar desde 2026 & Cobertura universal; lacuna: cumprimento do percentual nos municípios paulistas. \\
 \hline
-PAA e Cozinha Solidária & Federal; Lei n. 14.628/2023, arts. 2º, 8º e 14 a 19 & Compra da agricultura familiar com doação; refeições a vulneráveis & Pertinente; adesão estadual facultativa (art. 8º, § 1º); cobertura ainda restrita no Estado. \\
+PAA e Cozinha Solidária & Federal; Lei nº 14.628/2023, arts. 2º, 8º e 14 a 19 & Compra da agricultura familiar com doação; refeições a vulneráveis & Pertinente; adesão estadual facultativa (art. 8º, § 1º); cobertura ainda restrita no Estado. \\
 \hline
-Bom Prato & Estadual; desde 2000 & Refeições a preço subsidiado & Eficaz no acesso urbano; lacuna: focalização territorial e adequação a idosos. \\
+Bom Prato & Estadual; desde 2000; PPA, programa 3518 & Refeições a preço subsidiado: 73 unidades fixas e 30,3 milhões de refeições em 2022; meta de 140 unidades e 77,8 milhões de refeições em 2027 \cite{saopaulo2024ppa} & Eficaz no acesso urbano; lacuna: focalização territorial e adequação a idosos. \\
 \hline
-Vivaleite & Estadual; desde 1993 & Leite a crianças e idosos & Pertinente; lacuna: integração com os demais programas. \\
+Vivaleite & Estadual; desde 1993; PPA, programa 3518 & 15 litros de leite por mês a crianças e idosos; 308.810 beneficiários em 2022 e meta de 322.150 em 2027 \cite{saopaulo2024ppa} & Pertinente; lacuna: integração com os demais programas. \\
 \hline
-PPAIS & Estadual; Lei n. 14.591/2011 & Compras estaduais da agricultura de interesse social & Instrumento disponível, com potencial de ampliação. \\
+PPAIS & Estadual; Lei nº 14.591/2011 & Compras estaduais da agricultura de interesse social & Instrumento disponível, com potencial de ampliação. \\
 \hline
-Plano Nacional de Fertilizantes & Federal; Decreto n. 10.991/2022 & Reduzir a dependência de importações até 2050 & Horizonte longo; efeito limitado até 2030. \\
+Plano Nacional de Fertilizantes & Federal; Decreto nº 10.991/2022 & Reduzir a dependência de importações até 2050 & Horizonte longo; efeito limitado até 2030. \\
 \hline
-Programa Nacional de Bioinsumos & Federal; Decreto n. 10.375/2020 & Ampliar o uso de bioinsumos & Oportunidade para pesquisa estadual (APTA/IAC). \\
+Programa Nacional de Bioinsumos & Federal; Decreto nº 10.375/2020 & Ampliar o uso de bioinsumos & Oportunidade para pesquisa estadual (APTA/IAC). \\
 \hline
 CEAGESP e estoques da CONAB & Federal & Atacado e estoques reguladores & Concentração geográfica; estoques federais sem foco no abastecimento paulista. \\
 \hline
+PLANSAN/SP 2019--2023 & Estadual; Decreto nº 59.385/2013 (CAISAN-SP); Decreto nº 7.272/2010 & 9 desafios, 60 objetivos, 147 metas, ligados aos programas do PPA & Vigência encerrada em 2023; falta balanço público do cumprimento das metas, que deve preceder o novo plano. \\
+\hline
+PEAPO-SP & Estadual; Lei nº 16.684/2018, regulamentada pelo Decreto nº 66.508/2022 & Agroecologia e produção orgânica; Plano Estadual (PLEAPO) & Base legal para a transição de insumos (N6) e para os circuitos curtos (N5). \\
+\hline
 \end{tabularx}
-\fonte{elaborado pelos autores (2026), com base em \citeauthoronline{brasil2009} (\citeyear{brasil2009}, \citeyear{brasil2020bioinsumos}, \citeyear{brasil2022fertilizantes}, \citeyear{brasil2023paa}, \citeyear{brasil2025pnae}), \citeauthoronline{governo_sp_bomprato2025} (\citeyear{governo_sp_bomprato2025}), \citeauthoronline{iea_vivaleite} (\citeyear{iea_vivaleite}) e \citeauthoronline{saopaulo2011ppais} (\citeyear{saopaulo2011ppais}).}
+\fonte{elaborado pelos autores (2026), com base em \citeauthoronline{brasil2009} (\citeyear{brasil2009}, \citeyear{brasil2020bioinsumos}, \citeyear{brasil2022fertilizantes}, \citeyear{brasil2023paa}, \citeyear{brasil2025pnae}), \citeauthoronline{governo_sp_bomprato2025} (\citeyear{governo_sp_bomprato2025}), \citeauthoronline{iea_vivaleite} (\citeyear{iea_vivaleite}) e \citeauthoronline{saopaulo2011ppais} (\citeyear{saopaulo2011ppais}, \citeyear{saopaulo2013caisan}, \citeyear{saopaulo2018plansan}, \citeyear{saopaulo2018peapo}, \citeyear{saopaulo2022peapo}).}
 \end{quadro}
 
 Em síntese, os instrumentos de acesso existem e funcionam, mas não são
@@ -1367,7 +1455,7 @@ disponíveis e potenciais e indica sua suficiência.
 \hline
 \textbf{Necessidade (Expressão; origem)} & \textbf{Meios disponíveis} & \textbf{Meios potenciais} & \textbf{Sufic.} \\
 \hline
-N1 Ampliar o acesso focalizado das 970 mil pessoas em IA grave (Ps; D1, A3) & Bom Prato, Vivaleite, alimentação escolar, CadÚnico & Cozinha Solidária e PAA (Lei n. 14.628/2023); focalização territorial & Parcial \\
+N1 Ampliar o acesso focalizado das 970 mil pessoas em IA grave (Ps; D1, A3) & Bom Prato (73 unidades fixas em 2022; meta de 140 em 2027), Vivaleite (308.810 beneficiários), alimentação escolar, CadÚnico \cite{saopaulo2024ppa} & Cozinha Solidária e PAA (Lei nº 14.628/2023); focalização territorial & Parcial \\
 \hline
 N2 Assegurar a continuidade do abastecimento em crises, inclusive contra ameaças intencionais (M; D4, A4, A5) & Defesa Civil, SSP, CEAGESP, armazéns públicos e privados & Protocolos regionais; apoio das Forças Armadas nos termos legais & Parcial \\
 \hline
@@ -1480,111 +1568,129 @@ posição no plano influência exercida $\times$ recebida
 \label{qua:mea-atores}
 \footnotesize
 \renewcommand{\arraystretch}{1.0}
-\setlength{\tabcolsep}{2.5pt}
-\begin{tabularx}{\textwidth}{|l|*{10}{>{\centering\arraybackslash}X|}c|}
+\setlength{\tabcolsep}{2pt}
+\begin{tabularx}{\textwidth}{|l|*{11}{>{\centering\arraybackslash}X|}c|}
 \hline
-\textbf{Influenciado} & \textbf{At1} & \textbf{At2} & \textbf{At3} & \textbf{At4} & \textbf{At5} & \textbf{At6} & \textbf{At7} & \textbf{At8} & \textbf{At9} & \textbf{At10} & \textbf{Recebida} \\
+\textbf{Influenciado} & \textbf{At1} & \textbf{At2} & \textbf{At3} & \textbf{At4} & \textbf{At5} & \textbf{At6} & \textbf{At7} & \textbf{At8} & \textbf{At9} & \textbf{At10} & \textbf{At11} & \textbf{Recebida} \\
 \hline
-At1 Governo SP   & -- & 3 & 2 & 1 & 1 & 2 & 1 & 1 & 1 & 1 & 13 \\
+At1 Governo SP   & -- & 3 & 2 & 1 & 1 & 2 & 1 & 1 & 1 & 1 & 2 & 15 \\
 \hline
-At2 Controle     & 2 & -- & 0 & 0 & 0 & 2 & 1 & 1 & 0 & 0 & 6 \\
+At2 Controle     & 2 & -- & 0 & 0 & 0 & 2 & 1 & 1 & 0 & 0 & 1 & 7 \\
 \hline
-At3 União        & 1 & 0 & -- & 1 & 1 & 2 & 1 & 1 & 0 & 0 & 7 \\
+At3 União        & 1 & 0 & -- & 1 & 1 & 2 & 1 & 1 & 0 & 0 & 1 & 8 \\
 \hline
-At4 Municípios   & 3 & 2 & 3 & -- & 1 & 1 & 1 & 1 & 0 & 1 & 13 \\
+At4 Municípios   & 3 & 2 & 3 & -- & 1 & 1 & 1 & 1 & 0 & 1 & 2 & 15 \\
 \hline
-At5 Agric. famil.& 3 & 0 & 3 & 2 & -- & 1 & 3 & 1 & 2 & 0 & 15 \\
+At5 Agric. famil.& 3 & 0 & 3 & 2 & -- & 1 & 3 & 1 & 2 & 0 & 1 & 16 \\
 \hline
-At6 Agroexport.  & 1 & 1 & 2 & 0 & 0 & -- & 1 & 0 & 1 & 0 & 6 \\
+At6 Agroexport.  & 1 & 1 & 2 & 0 & 0 & -- & 1 & 0 & 1 & 0 & 0 & 6 \\
 \hline
-At7 Distribuição & 2 & 1 & 1 & 1 & 1 & 2 & -- & 1 & 0 & 1 & 10 \\
+At7 Distribuição & 2 & 1 & 1 & 1 & 1 & 2 & -- & 1 & 0 & 1 & 0 & 10 \\
 \hline
-At8 Consumidores & 3 & 1 & 3 & 2 & 1 & 0 & 2 & -- & 0 & 0 & 12 \\
+At8 Consumidores & 3 & 1 & 3 & 2 & 1 & 0 & 2 & -- & 0 & 0 & 2 & 14 \\
 \hline
-At9 Pesquisa     & 2 & 0 & 2 & 0 & 1 & 2 & 0 & 0 & -- & 0 & 7 \\
+At9 Pesquisa     & 2 & 0 & 2 & 0 & 1 & 2 & 0 & 0 & -- & 0 & 1 & 8 \\
 \hline
-At10 Def./Seg.   & 3 & 1 & 2 & 1 & 0 & 0 & 1 & 0 & 0 & -- & 8 \\
+At10 Def./Seg.   & 3 & 1 & 2 & 1 & 0 & 0 & 1 & 0 & 0 & -- & 0 & 8 \\
 \hline
-\textbf{Exercida} & \textbf{20} & \textbf{9} & \textbf{18} & \textbf{8} & \textbf{6} & \textbf{12} & \textbf{11} & \textbf{6} & \textbf{4} & \textbf{3} & 97 \\
+At11 SISAN-SP    & 3 & 1 & 2 & 1 & 1 & 1 & 1 & 2 & 1 & 0 & -- & 13 \\
 \hline
-\textbf{Perfil} & Lig. & Aut. & Dom. & Seg. & Seg. & Dom. & Lig. & Seg. & Aut. & Seg. & \\
+\textbf{Exercida} & \textbf{23} & \textbf{10} & \textbf{20} & \textbf{9} & \textbf{7} & \textbf{13} & \textbf{12} & \textbf{8} & \textbf{5} & \textbf{3} & \textbf{10} & 120 \\
+\hline
+\textbf{Perfil} & Lig. & Aut. & Dom. & Seg. & Seg. & Dom. & Lig. & Seg. & Aut. & Aut. & Seg. & \\
 \hline
 \end{tabularx}
-\fonte{avaliação da Equipe de Planejamento (2026). Perfis: Dom. = dominante; Lig. = de ligação; Aut. = autônomo; Seg. = seguidor. Pontos médios: exercida 10; recebida 7,5.}
+\fonte{avaliação da Equipe de Planejamento (2026). Perfis: Dom. = dominante; Lig. = de ligação; Aut. = autônomo; Seg. = seguidor. Pontos médios: exercida 11,5; recebida 8.}
 \end{quadro}
 
 \textbf{Leitura das pontuações.} Cada célula registra quanto o ator da coluna
 consegue influenciar as decisões do ator da linha: 0, nenhuma influência; 1,
 fraca; 2, moderada; 3, forte. A soma da coluna é a \textit{influência
 exercida} pelo ator sobre os demais, e a soma da linha, a \textit{influência
-recebida}, que mede quanto ele depende dos outros. Com dez atores, cada soma
-varia de 0 a 27. Conforme a MPE, o plano influência $\times$ dependência é
-dividido pelos pontos médios dos maiores valores observados: 20 $\div$ 2 = 10
-para a influência exercida e 15 $\div$ 2 = 7,5 para a recebida. O cruzamento das
+recebida}, que mede quanto ele depende dos outros. Com onze atores, cada soma
+varia de 0 a 30. Conforme a MPE, o plano influência $\times$ dependência é
+dividido pelos pontos médios dos maiores valores observados: 23 $\div$ 2 = 11,5
+para a influência exercida e 16 $\div$ 2 = 8 para a recebida. O cruzamento das
 duas classificações (alta ou baixa) define o perfil
 (Figura~\ref{fig:planos-cartesianos}b):
 
 \begin{itemize}
-\item \textbf{dominante} (exerce mais de 10 e recebe até 7,5): impõe sua
+\item \textbf{dominante} (exerce mais de 11,5 e recebe até 8): impõe sua
 posição e pouco negocia;
-\item \textbf{de ligação} (exerce mais de 10 e recebe mais de 7,5): influi e é
+\item \textbf{de ligação} (exerce mais de 11,5 e recebe mais de 8): influi e é
 influenciado, sendo o articulador natural de acordos;
-\item \textbf{autônomo} (exerce até 10 e recebe até 7,5): age por conta
+\item \textbf{autônomo} (exerce até 11,5 e recebe até 8): age por conta
 própria, com pouca interação;
-\item \textbf{seguidor} (exerce até 10 e recebe mais de 7,5): acompanha as
+\item \textbf{seguidor} (exerce até 11,5 e recebe mais de 8): acompanha as
 decisões dos demais e pode tornar-se aliado.
 \end{itemize}
 
 \textbf{Interpretação por ator.} O Governo do Estado (At1) tem a maior
-influência exercida (20), pois pontua 3 sobre municípios, agricultura familiar,
-consumidores e sistema de defesa e segurança, que dependem de seus programas,
-orçamento e comando. Recebe, porém, 13, sobretudo dos órgãos de controle (3),
-da União (2) e do setor agroexportador (2). Por isso é ator \textbf{de ligação}:
-cabe a ele, como Decisor, articular os pactos do plano, e ele precisa negociar
-com quem o condiciona.
+influência exercida (23), pois pontua 3 sobre municípios, agricultura familiar,
+consumidores, sistema de defesa e segurança e instâncias do SISAN-SP, que
+dependem de seus programas, orçamento, comando e atos de criação. Recebe, porém,
+15, sobretudo dos órgãos de controle (3) e, com 2 cada, da União, do setor
+agroexportador e das instâncias do SISAN-SP. Por isso é ator \textbf{de
+ligação}: cabe a ele, como Decisor, articular os pactos do plano, e ele precisa
+negociar com quem o condiciona.
 
-A União (At3) exerce 18 (pontua 3 sobre municípios, agricultura familiar e
-consumidores, por meio do PAA, do PNAE e da política de renda) e recebe apenas
-7, o que a torna \textbf{dominante}. O setor agroexportador (At6) também é
-dominante: exerce 12, com peso sobre a Assembleia, a União, o Governo do Estado,
-a distribuição e a pesquisa, e recebe só 6, pois suas decisões respondem ao
-mercado externo. A conclusão é que os dois atores mais poderosos estão fora do
-controle direto do Decisor: com a União, o plano deve buscar cooperação
-federativa formal; com o setor agroexportador, compatibilizar o uso da terra por
-incentivos, e não por imposição.
+A União (At3) exerce 20 (pontua 3 sobre municípios, agricultura familiar e
+consumidores, por meio do PAA, do PNAE e da política de renda) e recebe 8,
+exatamente o ponto médio, o que a mantém \textbf{dominante}, no limite da
+classificação. O setor agroexportador (At6) também é dominante: exerce 13, com
+peso sobre a Assembleia, a União, o Governo do Estado, a distribuição e a
+pesquisa, e recebe só 6, pois suas decisões respondem ao mercado externo. A
+conclusão é que os dois atores mais poderosos estão fora do controle direto do
+Decisor: com a União, o plano deve buscar cooperação federativa formal; com o
+setor agroexportador, compatibilizar o uso da terra por incentivos, e não por
+imposição.
 
-A distribuição (At7) é o segundo ator de ligação (exerce 11 e recebe 10). Sua
+A distribuição (At7) é o segundo ator de ligação (exerce 12 e recebe 10). Sua
 pontuação mais alta é 3 sobre a agricultura familiar, porque intermediários
 controlam o acesso dos pequenos produtores ao mercado. Isso explica por que as
 compras públicas diretas (AE-A3) reduzem uma dependência real e por que esse
 ator deve ser envolvido, e não contornado.
 
-A agricultura familiar (At5) é o ator mais dependente do sistema (recebe 15,
-com 3 do Governo do Estado, 3 da União e 3 da distribuição) e exerce apenas 6:
-é \textbf{seguidor}. Os consumidores vulneráveis (At8: exerce 6, recebe 12), os
-municípios (At4: 8 e 13) e o sistema de defesa e segurança (At10: 3 e 8) também
-são seguidores. São justamente os beneficiários e executores do plano; tendem a
-aliar-se se forem incluídos desde a formulação, mas sua adesão depende das
-decisões do Governo do Estado e da União.
+A agricultura familiar (At5) é o ator mais dependente do sistema (recebe 16,
+com 3 do Governo do Estado, 3 da União e 3 da distribuição) e exerce apenas 7:
+é \textbf{seguidor}. Os consumidores vulneráveis (At8: exerce 8, recebe 14) e
+os municípios (At4: 9 e 15) também são seguidores. As instâncias do SISAN-SP
+(At11: 10 e 13) são seguidoras porque dependem do Governador, que as cria por
+decreto e as preside por meio da SAA (3), e da União (2); sua influência
+exercida, porém, fica perto do ponto médio, o que mostra que o fortalecimento
+da CAISAN-SP com um grupo executivo pode deslocá-la para o papel de
+articuladora. Esses seguidores são beneficiários, executores e instâncias de
+participação do plano; tendem a aliar-se se forem incluídos desde a
+formulação.
 
-Os órgãos de controle (At2: exerce 9, recebe 6) e a pesquisa (At9: 4 e 7) são
-\textbf{autônomos}. No caso de At2, a influência se concentra sobre o Governo do
-Estado (3), por meio do orçamento e da fiscalização, e fica próxima do ponto
-médio; por isso, mesmo autônomo, deve ser envolvido cedo, para que as medidas
-tenham respaldo legal e orçamentário. A pesquisa precisa de aproximação técnica
-para que os bioinsumos cheguem ao produtor.
+A classificação como seguidor descreve a influência percebida, não o papel
+legal. Os municípios são entes autônomos que aderem voluntariamente ao SISAN e
+executam o PNAE com recursos repassados pelo FNDE; o CONSEA-SP propõe
+diretrizes e acompanha a política. Por isso, a estratégia deve buscá-los como
+parceiros na formulação, e não só como executores.
 
-\textbf{Conclusões para a estratégia.} A soma total da matriz é 97, de um
-máximo possível de 270, o que indica interdependência moderada: nenhum ator
+Os órgãos de controle (At2: exerce 10, recebe 7), a pesquisa (At9: 5 e 8) e o
+sistema de defesa e segurança (At10: 3 e 8) são \textbf{autônomos}. No caso de
+At2, a influência se concentra sobre o Governo do Estado (3), por meio do
+orçamento e da fiscalização; por isso, mesmo autônomo, deve ser envolvido cedo,
+para que as medidas tenham respaldo legal e orçamentário. A pesquisa precisa de
+aproximação técnica para que os bioinsumos cheguem ao produtor. O sistema de
+defesa e segurança atua segundo mandatos legais próprios e deve ser integrado
+por protocolos, e não por comando do plano.
+
+\textbf{Conclusões para a estratégia.} A soma total da matriz é 120, de um
+máximo possível de 330, o que indica interdependência moderada: nenhum ator
 resolve o problema sozinho, mas também não há bloqueio generalizado. As
 pontuações levam a quatro conclusões: (1) o Governo do Estado deve exercer o
-papel de articulador; (2) a cooperação da União é condição de sucesso, e por
-isso figura entre os FCS externos; (3) a agricultura familiar, os consumidores
-e os municípios são aliados potenciais que precisam ser fortalecidos, e não
-apenas atendidos; e (4) o setor agroexportador e a distribuição exigem
-negociação, o que antecipa os antagonismos levantados na seção 3.1.1. Os
-casos próximos aos pontos médios (At2, com 9 de influência, e At10, com 8 de
-dependência) são os mais sensíveis à revisão das notas e devem ser os
+papel de articulador, por meio da CAISAN-SP; (2) a cooperação da União é
+condição de sucesso, e por isso figura entre os FCS externos; (3) a agricultura
+familiar, os consumidores, os municípios e as instâncias do SISAN-SP são aliados
+potenciais que precisam ser fortalecidos, e não apenas atendidos; e (4) o setor
+agroexportador e a distribuição exigem negociação, o que antecipa os
+antagonismos levantados na seção 3.1.1. Os casos próximos aos pontos médios (a
+União, a pesquisa e o sistema de defesa e segurança, com 8 de influência
+recebida, e os órgãos de controle e as instâncias do SISAN-SP, com 10 de
+influência exercida) são os mais sensíveis à revisão das notas e devem ser os
 primeiros a ser validados com especialistas.
 
 \subsubsection{Matriz de Interesse dos Atores}
@@ -1598,28 +1704,28 @@ modular indica o interesse mobilizado.
 \label{qua:mia-atores}
 \footnotesize
 \renewcommand{\arraystretch}{1.0}
-\setlength{\tabcolsep}{2.5pt}
-\begin{tabularx}{\textwidth}{|l|*{10}{>{\centering\arraybackslash}X|}c|}
+\setlength{\tabcolsep}{2pt}
+\begin{tabularx}{\textwidth}{|l|*{11}{>{\centering\arraybackslash}X|}c|}
 \hline
-\textbf{Evento} & \textbf{At1} & \textbf{At2} & \textbf{At3} & \textbf{At4} & \textbf{At5} & \textbf{At6} & \textbf{At7} & \textbf{At8} & \textbf{At9} & \textbf{At10} & \textbf{Total} \\
+\textbf{Evento} & \textbf{At1} & \textbf{At2} & \textbf{At3} & \textbf{At4} & \textbf{At5} & \textbf{At6} & \textbf{At7} & \textbf{At8} & \textbf{At9} & \textbf{At10} & \textbf{At11} & \textbf{Total} \\
 \hline
-EFP1 Clima         & $-1$ & 0 & $-1$ & $-1$ & $-1$ & 0 & $-1$ & $-1$ & 0 & $-1$ & 7 \\
+EFP1 Clima         & $-1$ & 0 & $-1$ & $-1$ & $-1$ & 0 & $-1$ & $-1$ & 0 & $-1$ & $-1$ & 8 \\
 \hline
-EFP2 Preço         & $-1$ & $-1$ & $-1$ & $-1$ & $+1$ & 0 & 0 & $-1$ & 0 & 0 & 6 \\
+EFP2 Preço         & $-1$ & $-1$ & $-1$ & $-1$ & $+1$ & 0 & 0 & $-1$ & 0 & 0 & $-1$ & 7 \\
 \hline
-EFP3 Fertilizantes & $-1$ & 0 & $-1$ & 0 & $-1$ & 0 & $+1$ & 0 & $-1$ & 0 & 5 \\
+EFP3 Fertilizantes & $-1$ & 0 & $-1$ & 0 & $-1$ & 0 & $+1$ & 0 & $-1$ & 0 & 0 & 5 \\
 \hline
-EFP4 Terra         & 0 & 0 & 0 & 0 & $-1$ & $+1$ & 0 & $-1$ & 0 & 0 & 3 \\
+EFP4 Terra         & 0 & 0 & 0 & 0 & $-1$ & $+1$ & 0 & $-1$ & 0 & 0 & $-1$ & 4 \\
 \hline
-EFP5 Logística     & $-1$ & 0 & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & 0 & $-1$ & 8 \\
+EFP5 Logística     & $-1$ & 0 & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & 0 & $-1$ & $-1$ & 9 \\
 \hline
-EFP6 Idosos        & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+EFP6 Idosos        & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 \hline
-EFP7 Recursos      & $+1$ & 0 & $+1$ & $+1$ & $+1$ & 0 & $-1$ & $+1$ & 0 & 0 & 6 \\
+EFP7 Recursos      & $+1$ & 0 & $+1$ & $+1$ & $+1$ & 0 & $-1$ & $+1$ & 0 & 0 & $+1$ & 7 \\
 \hline
-EFP8 Bioinsumos    & $+1$ & 0 & $+1$ & 0 & $+1$ & $+1$ & $-1$ & 0 & $+1$ & 0 & 6 \\
+EFP8 Bioinsumos    & $+1$ & 0 & $+1$ & 0 & $+1$ & $+1$ & $-1$ & 0 & $+1$ & 0 & $+1$ & 7 \\
 \hline
-\textbf{Total} & 6 & 1 & 6 & 4 & 7 & 3 & 5 & 5 & 2 & 2 & 41 \\
+\textbf{Total} & 6 & 1 & 6 & 4 & 7 & 3 & 5 & 5 & 2 & 2 & 6 & 47 \\
 \hline
 \end{tabularx}
 \fonte{avaliação da Equipe de Planejamento (2026).}
@@ -1634,7 +1740,10 @@ cana e do eucalipto (EFP4), contra a agricultura familiar e a sociedade civil.
 A interrupção logística (EFP5) é o evento de maior interesse, e o envelhecimento
 (EFP6) não mobiliza interesses, por ser tendência demográfica. A agricultura
 familiar é o ator mais interessado no conjunto, o que confirma sua importância
-como aliado.
+como aliado. As instâncias do SISAN-SP (At11) acompanham o Governo do Estado nos
+eventos de abastecimento e de recursos federais, opõem-se à expansão da cana e
+do eucalipto sobre áreas de alimentos (EFP4) e apoiam os bioinsumos (EFP8), em
+linha com a Política Estadual de Agroecologia e Produção Orgânica.
 
 \subsection{Elaboração de Cenários Extremos}
 O Quadro~\ref{qua:avaliacao-effs} apresenta a probabilidade (0 a 10) e a
@@ -1677,14 +1786,14 @@ Situação & \textbf{EFF1} & \textbf{EFF2} & \textbf{EFF3} & -- & -- & TP6 & \te
 \node[gray] at (2.3,8.8){I}; \node[gray] at (9.3,8.8){II}; \node[gray] at (2.3,0.4){III}; \node[gray] at (9.3,0.4){IV};
 \node at (5,-2.2){(a) EFP na MIC};
 \end{tikzpicture}\hfill
-\begin{tikzpicture}[x=0.26cm,y=0.214cm,font=\scriptsize]
-% (b) MEA: recebida (x, 0-16) x exercida (y, 0-21)
-\draw[->] (0,0) -- (16,0) node[below,pos=0.5,yshift=-6pt]{Influência recebida};
-\draw[->] (0,0) -- (0,22.2) node[above]{Exercida};
-\draw[dashed,gray] (7.5,0) -- (7.5,21); \draw[dashed,gray] (0,10) -- (15.7,10);
-\foreach \x/\y/\n/\p in {13/20/1/left,6/9/2/left,7/18/3/right,13/8/4/above,15/6/5/above,6/12/6/left,10/11/7/above,12/6/8/below,7/4/9/left,8/3/10/right}
+\begin{tikzpicture}[x=0.245cm,y=0.192cm,font=\scriptsize]
+% (b) MEA: recebida (x, 0-17) x exercida (y, 0-24)
+\draw[->] (0,0) -- (17,0) node[below,pos=0.5,yshift=-6pt]{Influência recebida};
+\draw[->] (0,0) -- (0,24.7) node[above]{Exercida};
+\draw[dashed,gray] (8,0) -- (8,23.5); \draw[dashed,gray] (0,11.5) -- (16.7,11.5);
+\foreach \x/\y/\n/\p in {15/23/1/left,7/10/2/left,8/20/3/right,15/9/4/above right,16/7/5/below right,6/13/6/left,10/12/7/above,14/8/8/below,8/5/9/left,8/3/10/right,13/10/11/above}
   {\fill (\x,\y) circle (2pt) node[\p]{At\n};}
-\node at (8,-5.1){(b) Atores na MEA};
+\node at (8.5,-5.7){(b) Atores na MEA};
 \end{tikzpicture}\hfill
 \begin{tikzpicture}[x=0.42cm,y=0.45cm,font=\scriptsize]
 % (c) P x F: probabilidade (x, 0-10) x favorabilidade (y, -5 a 5)
@@ -1811,7 +1920,7 @@ aonde se pretende chegar.
 \hline
 \textbf{Expressão} & \textbf{Situação desejada em 2030} & \textbf{Diferença em relação ao Cenário Mais Provável} \\
 \hline
-Política & Comitê intersetorial criado por decreto, dados integrados e programas focalizados por território & Coordenação estadual específica, inexistente no Mais Provável \\
+Política & CAISAN-SP e seu grupo executivo, dados integrados e programas focalizados por território & Coordenação estadual específica, inexistente no Mais Provável \\
 \hline
 Econômica & Estoques regionais com 15 dias de arroz e feijão e acordos com as UF fornecedoras & Proteção contra os choques de EFF1 e EFF3 \\
 \hline
@@ -1850,6 +1959,8 @@ meta.
 \hline
 OE1 Assegurar à população paulista o direito humano à alimentação adequada, com prioridade aos vulneráveis & OF: CF, art. 3º, III & \% de domicílios em IA grave; \% em IA moderada ou grave (PNAD/EBIA) & 2,4\%; 5,6\% (2024) & $\leq$1,5\% e $\leq$4,0\% (2030); $\leq$1,0\% (2035) \\
 \hline
+OE1 (equidade) & OF: CF, art. 3º, III e IV & Razão entre a prevalência de IA grave em domicílios com pessoa de referência preta ou parda e com pessoa de referência branca (PNAD/EBIA, SP) & Apurada em 2027 & Redução da razão até 2030 \\
+\hline
 OE2 Manter sistema agroalimentar sustentável e resiliente, cooperando com as demais UF & OF: CF, art. 3º, II & Dias de cobertura de estoques públicos de arroz e feijão & Apurada em 2027 & 15 dias (2030) \\
 \hline
 OG1 Integrar dados de oferta, preços, estoques, riscos e acesso, com protocolos de alerta e resposta & OE1, OE2 & Regiões administrativas com protocolo testado & 0 & 100\% (2028) \\
@@ -1862,6 +1973,8 @@ OG4 Validar e difundir bioinsumos e remineralizadores e proteger áreas de produ
 \hline
 OG5 Ampliar o acesso focalizado: refeições subsidiadas e equipamentos públicos nos territórios de maior IA, adaptados a idosos e crianças & OE1 & Refeições subsidiadas por dia nos territórios prioritários & Apurada em 2027 & $+$50\% (2030) \\
 \hline
+OG5 (focalização) & OE1 & \% de famílias indígenas, quilombolas e de povos e comunidades tradicionais do CadÚnico-SP atendidas por equipamento ou programa de acesso & Apurada em 2027 & Meta a pactuar com o CONSEA-SP \\
+\hline
 \end{tabularx}
 \fonte{elaborado pelos autores (2026), a partir do Cenário Mais Provável, das Necessidades (Quadro~\ref{qua:necessidades-meios}) e de \citeonline{brasil1988}.}
 \end{quadro}
@@ -1872,7 +1985,10 @@ não seria exequível \cite[p. 41]{esg_fpn2024}. O OG5 atua diretamente sobre o
 acesso econômico, causa principal apontada no diagnóstico. As metas de estoque
 derivam da Tabela~\ref{tab:balanco-oferta-demanda-sp}. O percentual estadual do
 OG3 é proposta ao Decisor, a adotar por ato próprio, e não obrigação legal já
-existente (seção 3.1.4).
+existente (seção 3.1.4). No Brasil, 16,8\% das famílias do CadÚnico com
+responsável negro estavam em risco de IA grave, contra 2,1\% das com
+responsável branco \cite{mds_cadinsan2025}; o plano estadual deve medir essa
+diferença em São Paulo, em coerência com o Desafio 2 do PLANSAN/SP.
 
 Os OE decorrem de necessidades permanentes (acesso, saúde, sustentabilidade,
 continuidade do abastecimento e integração federativa) e, por isso, têm
@@ -1899,7 +2015,7 @@ não se realizam; podem ser internos, sob controle do Decisor, ou externos
 \hline
 \textbf{Fator crítico} & \textbf{Sinal de acompanhamento} & \textbf{OE/OG} & \textbf{Tipo} \\
 \hline
-Governança intersetorial formalizada & Comitê criado por decreto e reuniões regulares & Todos & Interno \\
+Governança intersetorial formalizada & CAISAN-SP e seu grupo executivo, com reuniões regulares & Todos & Interno \\
 \hline
 Dados confiáveis e georreferenciados & CadÚnico e preços integrados e usados em decisões & OG1, OG5 & Interno \\
 \hline
@@ -1956,7 +2072,7 @@ Alta de preços e renda insuficiente (A3, D1) & Fator adverso & OE1, OG5 & Equip
 \hline
 Dependência de fertilizantes (A2) & Fator adverso & OE2, OG4 & Pesquisa e difusão de bioinsumos \\
 \hline
-Fragmentação institucional e de dados (D3) & Fator adverso & OG1, OG5 & Comitê intersetorial e plataforma integrada \\
+Fragmentação institucional e de dados (D3) & Fator adverso & OG1, OG5 & CAISAN-SP e seu grupo executivo, com plataforma integrada \\
 \hline
 Restrição fiscal e descontinuidade administrativa (A8) & Fator adverso & Todos & Inclusão no PPA; metas verificáveis \\
 \hline
@@ -1997,7 +2113,7 @@ Ações Estratégicas (AE) numeradas
 \textbf{LAE e ênfase} & \textbf{Ações estratégicas (OG atendido)} & \textbf{Vetor e Expressão} \\
 \hline
 LAE-A Acesso primeiro (OE1) &
-AE-A1 Georreferenciar as famílias em extrema pobreza do CadÚnico e definir territórios prioritários (OG1); AE-A2 Expandir Bom Prato e cozinhas solidárias nesses territórios, com cardápios para idosos e crianças, articulados à Lei n. 14.628/2023 (OG5); AE-A3 Fixar percentual mínimo estadual de compras da agricultura familiar e cumprir 45\% no PNAE (OG3); AE-A4 Protocolo de acesso emergencial acionado pelo preço da cesta (OG2); AE-A5 Pilotos de bioinsumos e incentivo ao cinturão verde ligados às compras públicas (OG4). &
+AE-A1 Georreferenciar as famílias em extrema pobreza do CadÚnico e definir territórios prioritários (OG1); AE-A2 Expandir Bom Prato e cozinhas solidárias nesses territórios, com cardápios para idosos e crianças, articulados à Lei nº 14.628/2023 (OG5); AE-A3 Fixar percentual mínimo estadual de compras da agricultura familiar e cumprir 45\% no PNAE (OG3); AE-A4 Protocolo de acesso emergencial acionado pelo preço da cesta (OG5); AE-A5 Pilotos de bioinsumos e incentivo ao cinturão verde ligados às compras públicas (OG4). &
 Defesa (Ps); Reforço (P) \\
 \hline
 LAE-B Abastecimento resiliente (OE2) &
@@ -2108,8 +2224,8 @@ Sensibilidade 2 & & 82 & 74 & 54 & 90 & Resiliência 35; IA grave 20 \\
 \end{quadro}
 
 Entre as LAE originais, a ordem é LAE-A (86), LAE-B (70) e LAE-C (52); a
-diferença de 16 pontos entre as duas primeiras mantém-se nas duas variações de
-pesos. A opção combinada atinge 90 pontos e não fica abaixo da LAE-A em nenhuma
+LAE-A permanece à frente da LAE-B nas duas variações de pesos, com vantagem de
+20 e de 8 pontos. A opção combinada atinge 90 pontos e não fica abaixo da LAE-A em nenhuma
 das simulações, o que indica resultado robusto.
 
 \subsection{Opção Estratégica}
@@ -2174,7 +2290,7 @@ ou específicas (Esp), às ações da opção
 \hline
 \textbf{Diretriz} & \textbf{Tipo} & \textbf{AE / OG} & \textbf{Responsável} & \textbf{Prazo} \\
 \hline
-Criar, por decreto, o Comitê Gestor Intersetorial de Segurança Alimentar e Abastecimento & Esp & Todas & Governador; Casa Civil & mar. 2027 \\
+Alterar o Decreto nº 59.385/2013 para instituir, no âmbito da CAISAN-SP, grupo executivo de segurança alimentar e abastecimento, com coordenação da Casa Civil e secretaria-executiva na SAA, e incluir na CAISAN as pastas do plano que não a integram & Esp & Todas & Governador; Casa Civil; SAA & mar. 2027 \\
 \hline
 Georreferenciar o CadÚnico e definir os territórios prioritários & Esp & A1 / OG1, OG5 & SEDS & dez. 2027 \\
 \hline
@@ -2182,7 +2298,7 @@ Expandir Bom Prato e cozinhas solidárias nos territórios prioritários & R & A
 \hline
 Fixar percentual estadual de compras da agricultura familiar e assegurar 45\% no PNAE & S & A3 / OG3 & SAA; Educação; SEFAZ & jun. 2027 \\
 \hline
-Instituir o protocolo de acesso emergencial com gatilho de preço & Esp & A4 / OG2 & SEDS; SAA & dez. 2027 \\
+Instituir o protocolo de acesso emergencial com gatilho de preço & Esp & A4 / OG5 & SEDS; SAA & dez. 2027 \\
 \hline
 Implantar estoques de arroz e feijão: piloto na Macrometrópole e meta de 15 dias & R & B1 / OG2 & SAA, com CONAB & 2028; 2030 \\
 \hline
@@ -2198,20 +2314,20 @@ Executar pilotos de bioinsumos e proteger o cinturão verde & S & A5 / OG4 & SAA
 \fonte{elaborado pelos autores (2026). Nomenclatura dos órgãos a confirmar no ato de criação.}
 \end{quadro}
 
-Quanto às compras públicas, a Lei n. 14.628/2023 reinstituiu o Programa de
+Quanto às compras públicas, a Lei nº 14.628/2023 reinstituiu o Programa de
 Aquisição de Alimentos (PAA), cujas finalidades incluem incentivar a
 agricultura familiar e fortalecer circuitos locais e regionais de
 comercialização (art. 2º), e criou o Programa Cozinha Solidária (art. 14). Para a
 administração federal, ao menos 30\% das compras de alimentos devem, sempre que
 possível, provir da agricultura familiar (art. 8º), faculdade que o § 1º estende
 a estados e municípios \cite{brasil2023paa}. Na alimentação escolar, o mínimo
-passou a 45\% dos recursos do PNAE a partir de 2026 (Lei n. 11.947/2009, art.
-14, com redação da Lei n. 15.226/2025) \cite{brasil2025pnae}. Propõe-se ao
+passou a 45\% dos recursos do PNAE a partir de 2026 (Lei nº 11.947/2009, art.
+14, com redação da Lei nº 15.226/2025) \cite{brasil2025pnae}. Propõe-se ao
 Decisor que o Estado adote, por ato próprio, percentual mínimo equivalente em
 suas compras institucionais (hospitais, unidades prisionais, Bom Prato),
 articulado ao PPAIS \cite{saopaulo2011ppais}. Do mesmo modo, a LOSAN dispõe que
 a segurança alimentar e nutricional abrange a formação de estoques reguladores e
-estratégicos de alimentos (art. 4º, VII, incluído pela Lei n. 13.839/2019)
+estratégicos de alimentos (art. 4º, VII, incluído pela Lei nº 13.839/2019)
 \cite{brasil2019estoques}; os estoques estaduais são, portanto, medida proposta
 ao Decisor, compatível com a lei.
 
@@ -2238,7 +2354,7 @@ I3 Custo da cesta $\div$ salário mínimo (\%) & DIEESE; mensal; SAA & Apurada e
 \hline
 I4 Refeições subsidiadas/dia nos territórios prioritários & SEDS; mensal & Apurada em 2027 & $+$25\% & $+$50\% & Execução abaixo de 80\% da meta \\
 \hline
-I5 Compras da agricultura familiar no PNAE (\%) & FNDE; anual; Educação & Apurada em 2027 & 45\% & $\geq$45\% & Município abaixo de 45\% \\
+I5 Compras da agricultura familiar no PNAE (\%) & FNDE; anual; Educação & Apurada em 2027 & 45\% & $\geq$45\% & Município abaixo de 45\% recebe apoio técnico da SAA/CATI e da Educação para chamadas públicas; rede estadual abaixo de 45\% revisa o cronograma de compras \\
 \hline
 I6 Regiões administrativas com protocolo testado (\%) & SAA; Defesa Civil; anual & 0 & 100\% & 100\% & Exercício não realizado \\
 \hline
@@ -2255,9 +2371,12 @@ A Programação traduz a opção em recursos, cronograma e carteira de projetos.
 
 \subsection{Orçamentos}
 A previsão do volume de recursos parte de quantidades físicas derivadas do
-diagnóstico e de custos unitários a levantar em fontes oficiais. O
-Quadro~\ref{qua:orcamento-preliminar} apresenta a premissa de cálculo, as fontes
-de recursos e o cronograma físico (Gantt) de 2027 a 2030.
+diagnóstico e dos programas do Plano Plurianual (PPA) 2024--2027, instituído pela
+Lei nº 17.898/2024 \cite{saopaulo2024ppa}, nos quais cada frente se apoia. O
+Quadro~\ref{qua:orcamento-preliminar} apresenta a premissa de cálculo, o
+programa e a ação do PPA com o valor do programa no quadriênio, como ordem de
+grandeza da base de recursos existente, as fontes e o cronograma físico (Gantt)
+de 2027 a 2030.
 
 \begin{quadro}[!htbp]
 \centering
@@ -2266,27 +2385,34 @@ de recursos e o cronograma físico (Gantt) de 2027 a 2030.
 \footnotesize
 \renewcommand{\arraystretch}{1.05}
 \setlength{\tabcolsep}{2.5pt}
-\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{2.3cm}|c|c|c|c|}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{3.6cm}|>{\raggedright\arraybackslash}X|c|c|c|c|}
 \hline
-\textbf{Frente (AE)} & \textbf{Premissa de cálculo (ordem de grandeza)} & \textbf{Fonte de recurso} & \textbf{27} & \textbf{28} & \textbf{29} & \textbf{30} \\
+\textbf{Frente (AE)} & \textbf{Premissa de cálculo} & \textbf{Programa e ação do PPA 2024--2027 (valor do programa no quadriênio); fonte} & \textbf{27} & \textbf{28} & \textbf{29} & \textbf{30} \\
 \hline
-Governança e dados (A1, B2) & Equipe técnica e plataforma, por referência a sistemas públicos similares & Tesouro estadual & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!20} & \cellcolor{gray!20} \\
+Governança e dados (A1, B2) & Equipe técnica e plataforma, por referência a sistemas públicos similares & 1318 -- Gestão Administrativa e Governança em Agricultura e Abastecimento (R\$ 1,33 bilhão; SAA); Tesouro & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!20} & \cellcolor{gray!20} \\
 \hline
-Acesso focalizado (A2, A4) & Refeições adicionais/ano $\times$ subsídio unitário por refeição praticado pela SEDS & Tesouro; Cozinha Solidária & \cellcolor{gray!20} & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!45} \\
+Acesso focalizado (A2, A4) & Refeições adicionais por ano $\times$ subsídio unitário praticado pela SEDS & 3518 -- Política de Segurança Alimentar e Nutricional (R\$ 2,03 bilhões; SEDS), ações 6001, 6380 e 8363 (Bom Prato) e 6000 (Vivaleite); Tesouro e Cozinha Solidária & \cellcolor{gray!20} & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!45} \\
 \hline
-Compras públicas (A3) & Remanejamento das compras existentes; custo incremental baixo & PNAE (FNDE); PAA; Tesouro & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!45} \\
+Compras públicas (A3) & Remanejamento das compras existentes; custo incremental baixo & 0815 -- Gestão Institucional da Secretaria da Educação, ação 6172 (alimentação escolar), e 1317 -- Produção Sustentável (R\$ 2,75 bilhões; SAA), produto 2045 (apoio a cooperativas); PNAE (FNDE), PAA e Tesouro & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!45} \\
 \hline
-Estoques regionais (B1) & 29 mil t de arroz e 11 mil t de feijão $\times$ preço de atacado, mais custo anual de carregamento e rotação, a preços de referência da CONAB e do IEA & Tesouro; cooperação com a CONAB & & \cellcolor{gray!20} & \cellcolor{gray!45} & \cellcolor{gray!45} \\
+Estoques regionais (B1) & 29 mil t de arroz e 11 mil t de feijão $\times$ preço de atacado (CONAB e IEA), mais custo anual de carregamento e rotação & 1316 -- Defesa Agropecuária e Sustentabilidade Sanitária Integrada à Segurança Alimentar (R\$ 491,6 milhões; SAA), produtos 2156 (entrepostos e mercados atacadistas) e 2152 (bancos de alimentos); Tesouro e CONAB & & \cellcolor{gray!20} & \cellcolor{gray!45} & \cellcolor{gray!45} \\
 \hline
-Logística e segurança (B3, B4) & Estudos, acordos e operações integradas, no orçamento da SSP e da Defesa Civil & Tesouro; União & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!20} & \cellcolor{gray!20} \\
+Logística e segurança (B3, B4) & Estudos, acordos e operações integradas & 2811 -- Defesa Civil Somos Todos Nós! (R\$ 343,1 milhões) e 1317, produto 2236 (Segurança no Campo); Tesouro e União & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!20} & \cellcolor{gray!20} \\
 \hline
-Bioinsumos e cinturão verde (A5) & Ensaios por cadeia $\times$ custo de ensaio da APTA & FEAP; editais; financiamento climático & \cellcolor{gray!20} & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!20} \\
+Bioinsumos e cinturão verde (A5) & Ensaios por cadeia $\times$ custo de ensaio da APTA & 1319 -- Inovação Agropecuária (R\$ 991,4 milhões; SAA), produto 2208 (insumos estratégicos); FEAP, editais e financiamento climático & \cellcolor{gray!20} & \cellcolor{gray!45} & \cellcolor{gray!45} & \cellcolor{gray!20} \\
 \hline
-\textbf{Total} & Soma das frentes, comparada à LOA das pastas envolvidas & & & & & \\
+\textbf{Total} & Acréscimos das frentes, comparados à LOA das pastas & Programas de referência: R\$ 7,94 bilhões no quadriênio, sem contar o 0815 & & & & \\
 \hline
 \end{tabularx}
-\fonte{elaborado pelos autores (2026). Gantt: cinza-escuro = implantação; cinza-claro = preparação ou manutenção.}
+\fonte{elaborado pelos autores (2026), com base em \citeonline{saopaulo2024ppa}. Valores do PPA em recursos orçamentários do quadriênio 2024--2027. Gantt: cinza-escuro = implantação; cinza-claro = preparação ou manutenção.}
 \end{quadro}
+
+O PPA vigente cobre apenas 2027 do horizonte do plano; as ações de 2028 a 2030
+dependem do PPA 2028--2031, a ser elaborado em 2027, que é a oportunidade de
+incorporar as metas da opção estratégica aos programas indicados. Os códigos
+1308 (SAA) e 3500 (SEDS) citados no PLANSAN/SP referem-se ao PPA 2016--2019: no
+PPA atual, a segurança alimentar e nutricional da SEDS está no programa 3518, e o
+3500 corresponde à Política de Assistência Social.
 
 Os valores devem ser compatibilizados com o Plano Plurianual, a Lei de
 Diretrizes Orçamentárias e a Lei Orçamentária Anual, e comparados com a dotação
@@ -2318,15 +2444,15 @@ Plano Estadual de Resiliência do Abastecimento & Todas as regiões administrati
 \hline
 Projeto de Inteligência Agroalimentar & Gestores; famílias do CadÚnico & Plataforma e mapa de territórios prioritários (2028) & SAA; SEDS & LGPD; decreto \\
 \hline
-Programa de Equipamentos Públicos de Alimentação & Famílias em extrema pobreza nos territórios prioritários & $+$50\% de refeições subsidiadas & SEDS & Lei n. 14.628/2023 \\
+Programa de Equipamentos Públicos de Alimentação & Famílias em extrema pobreza nos territórios prioritários & $+$50\% de refeições subsidiadas & SEDS & Lei nº 14.628/2023 \\
 \hline
-Programa de Circuitos Curtos e Compras Institucionais & Agricultura familiar paulista & 45\% (PNAE) e 30\% (Estado) & SAA; Educação & Lei n. 11.947/2009; PPAIS \\
+Programa de Circuitos Curtos e Compras Institucionais & Agricultura familiar paulista & 45\% (PNAE) e 30\% (Estado) & SAA; Educação & Lei nº 11.947/2009; PPAIS \\
 \hline
 Projeto de Estoques Regionais de Grãos & Macrometrópole, depois demais regiões & 29 mil t de arroz e 11 mil t de feijão & SAA; CONAB & LOSAN, art. 4º, VII \\
 \hline
-Programa de Bioinsumos e Remineralizadores & Produtores das cadeias-piloto & 3 cadeias validadas & SAA (APTA/IAC) & Decreto n. 10.375/2020 \\
+Programa de Bioinsumos e Remineralizadores & Produtores das cadeias-piloto & 3 cadeias validadas & SAA (APTA/IAC) & Decreto nº 10.375/2020 \\
 \hline
-Sistema de Monitoramento e Avaliação & Comitê Gestor e sociedade & Relatório anual; revisão em 2028 & Comitê Gestor & Decreto do comitê \\
+Sistema de Monitoramento e Avaliação & CAISAN-SP, seu grupo executivo e sociedade & Relatório anual; revisão em 2028 & CAISAN-SP e seu grupo executivo & Decreto de alteração da CAISAN-SP \\
 \hline
 \end{tabularx}
 \fonte{elaborado pelos autores (2026), a partir das diretrizes e do Quadro~\ref{qua:orcamento-preliminar}.}
@@ -2349,10 +2475,10 @@ A execução transforma a situação atual na pretendida, articulando ações,
 atores e recursos com transparência e capacidade de adaptação.
 
 \subsection{Coordenação}
-Propõe-se o \textbf{Comitê Gestor Intersetorial de Segurança Alimentar e
-Abastecimento}, criado por decreto do Governador, coordenado pela Casa Civil,
-com secretaria-executiva na SAA, articulado ao CONSEA-SP e às instâncias
-estaduais do SISAN
+A coordenação cabe à \textbf{CAISAN-SP}, instância intersecretarial do SISAN no
+Estado, por meio de grupo executivo coordenado pela Casa Civil, com
+secretaria-executiva na SAA. O CONSEA-SP e as 16 CRSANS propõem diretrizes e
+acompanham a execução das metas nos territórios
 (Quadro~\ref{qua:coordenacao-gestao}).
 
 \begin{quadro}[!htbp]
@@ -2368,19 +2494,23 @@ estaduais do SISAN
 \hline
 Governador (Decisor) & Aprovar prioridades, recursos e riscos aceitáveis; designar responsáveis & Decreto e decisões registradas \\
 \hline
-Comitê Gestor (Casa Civil; SAA) & Integrar cronograma, riscos e comunicação; encaminhar impasses & Plano integrado e painel de indicadores \\
+CAISAN-SP (pleno dos secretários) & Aprovar o plano, as prioridades e a revisão de 2028 & Resoluções e plano aprovado \\
+\hline
+Grupo executivo da CAISAN-SP (Casa Civil; SAA) & Integrar cronograma, riscos e comunicação; encaminhar impasses & Plano integrado e painel de indicadores \\
 \hline
 Secretarias (SAA, SEDS, Educação, Saúde, SEMIL, SSP, SEFAZ) e Defesa Civil & Executar as AE de sua competência e reportar & Relatórios trimestrais \\
 \hline
 Municípios, União (MDS, MAPA, CONAB) e consórcios & Pactuar adesão, cofinanciamento e dados & Acordos de cooperação \\
 \hline
-Agricultura familiar, distribuição, pesquisa e sociedade civil & Contribuir para o desenho e o controle social & Protocolos, notas técnicas e consultas \\
+CONSEA-SP e CRSANS & Propor diretrizes; acompanhar metas e cobertura por território & Recomendações e relatório anual de acompanhamento \\
+\hline
+Agricultura familiar, distribuição e pesquisa & Contribuir para o desenho e o controle social & Protocolos, notas técnicas e consultas \\
 \hline
 \end{tabularx}
 \fonte{elaborado pelos autores (2026).}
 \end{quadro}
 
-O comitê manterá um plano integrado de trabalho, resolverá interdependências,
+O grupo executivo da CAISAN-SP manterá um plano integrado de trabalho, resolverá interdependências,
 acompanhará riscos e encaminhará ao Governador as decisões que excedam sua
 alçada. Grupos técnicos tratarão de dados e alertas, acesso e compras públicas,
 estoques e segurança da cadeia, e bioinsumos. A participação de agentes privados
@@ -2411,7 +2541,7 @@ expansão a resultados (Quadro~\ref{qua:implantacao-gestao}).
 \hline
 \textbf{Etapa e período} & \textbf{Atividades principais} & \textbf{Condição para avançar} \\
 \hline
-Preparação (1º sem. 2027) & Decreto do comitê; linhas de base; territórios prioritários; percentual de compras & Responsáveis designados e recursos no orçamento \\
+Preparação (1º sem. 2027) & Decreto de alteração da CAISAN-SP; linhas de base; territórios prioritários; percentual de compras & Responsáveis designados e recursos no orçamento \\
 \hline
 Pilotos (2º sem. 2027--2028) & Equipamentos nos primeiros territórios; protocolos; piloto de estoques na Macrometrópole & Avaliação de custos, cobertura e falhas \\
 \hline
@@ -2534,7 +2664,7 @@ extrema pobreza do CadÚnico (SEDS); fixar percentual estadual de compras da
 agricultura familiar e cumprir 45\% no PNAE (SAA e Educação); formar estoques de
 15 dias de arroz e feijão, cerca de 29 mil t e 11 mil t, com a CONAB (SAA); e
 integrar dados, protocolos de contingência e segurança da cadeia (SAA, Defesa
-Civil e SSP), sob um Comitê Gestor criado por decreto. As metas para 2030 são IA
+Civil e SSP), sob coordenação da CAISAN-SP. As metas para 2030 são IA
 grave de no máximo 1,5\% e IA moderada ou grave de no máximo 4,0\% dos
 domicílios. A ordem de grandeza dos recursos depende dos custos unitários
 indicados na Programação.
@@ -2569,6 +2699,8 @@ pobreza e reduzir as desigualdades.
 \renewcommand{\bibname}{Bibliografia}
 \renewcommand{\bibsection}{\chapter{\bibname}}
 \bibliographystyle{abntex2-alf}
+\sloppy
+\nocite{abnt-options}
 \bibliography{tcc-grupo3-charlie}
 
 %---------------------------------------------------------------------
@@ -2577,28 +2709,25 @@ pobreza e reduzir as desigualdades.
 \chapter{Componentes do grupo}
 \label{componentes-grupo}
 
-\textbf{Componentes do grupo}
-
-\bigskip
-
 \footnotesize
 \setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.6}
 \noindent
-\begin{tabularx}{\textwidth}{|p{1.3cm}|>{\raggedright\arraybackslash}X|p{2.6cm}|p{2.5cm}|p{1.8cm}|}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2.9cm}|>{\centering\arraybackslash}p{2.1cm}|p{2.4cm}|}
 \hline
-\textbf{No. de inscrição} & \textbf{Nome} & \textbf{Título profissional} & \textbf{Função no grupo} & \textbf{Assinatura} \\
+\multicolumn{1}{|c|}{\textbf{NÚMERO}} & \multicolumn{1}{c|}{\textbf{NOME}} & \textbf{TÍTULO PROFISSIONAL} & \textbf{FUNÇÃO NO GRUPO} & \multicolumn{1}{c|}{\textbf{ASSINATURA}} \\
 \hline
-06 & Cícero Santos Melo & Policial Militar & Apresentador & \\
+06 & \textbf{Cícero} Santos Melo & Policial Militar & Apresentador & \\
 \hline
-30 & Ivan Lacava Filho & Procurador Municipal & Pesquisador & \\
+30 & Ivan \textbf{Lacava} Filho & Procurador Municipal & Pesquisador & \\
 \hline
-16 & João Vieira de Góis Júnior & Policial Civil & Relator & \\
+16 & João Vieira de \textbf{Góis} Júnior & Policial Civil & Relator & \\
 \hline
-20 & Márcio Bontempo & Empresário & Pesquisador & \\
+20 & Márcio \textbf{Bontempo} & Empresário & Pesquisador & \\
 \hline
-23 & Marcos Roberto Silva & Engenheiro & Dirigente & \\
+23 & Marcos \textbf{Roberto} Silva & Engenheiro & Dirigente & \\
 \hline
-26 & Pedro Octavio de Souza Barros & Exército Brasileiro & Pesquisador & \\
+26 & \textbf{Pedro} Octavio de Souza Barros & Exército Brasileiro & Pesquisador & \\
 \hline
 \end{tabularx}
 
