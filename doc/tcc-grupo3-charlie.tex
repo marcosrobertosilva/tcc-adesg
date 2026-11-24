@@ -53,7 +53,7 @@
 % ---
 % Pacotes de citações
 % ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+%\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
 % --- 
@@ -61,20 +61,6 @@
 % --- 
 
 % ---
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
-% Texto padrão antes do número das páginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #1 vezes nas páginas #2.%
-	\fi}%
 % ---
 
 % ---
@@ -172,7 +158,7 @@ Estudos de Política e Estratégia, 69a. turma.}
 \renewcommand{\arraystretch}{1.3}%
 \begin{tabular}{|p{0.68\textwidth}|>{\centering\arraybackslash}p{0.24\textwidth}|}
 \hline
-\multicolumn{1}{|c|}{\fontsize{26}{31}\selectfont \cepenumero\ CEPE -- \cepeano} & {\fontsize{18}{22}\selectfont Grupo \cepegrupo} \\
+\multicolumn{1}{|c|}{\rule[-0.35cm]{0pt}{1.25cm}\fontsize{26}{31}\selectfont \cepenumero\ CEPE -- \cepeano} & {\fontsize{18}{22}\selectfont Grupo \cepegrupo} \\
 \hline
 \multicolumn{2}{|>{\centering\arraybackslash}p{0.94\textwidth}|}{\rule{0pt}{1.1cm}\fontsize{26}{31}\selectfont Segurança Alimentar e Agronegócio Sustentável no Estado de São Paulo\par\vspace{0.6cm}} \\
 \hline
@@ -263,7 +249,10 @@ Aprovado em: \underline{\hspace{1.5cm}}/\underline{\hspace{1.5cm}}/\underline{\h
 
 \assinatura{Prof. Reinaldo Bento de Lima\\Orientador}
 \assinatura{Profa. Nídia Caivano\\ADESG, Delegacia no Estado de São Paulo}
-\assinatura{Nome do membro da banca\\Instituição}
+\assinatura{Prof. Marco Antônio Pizzocaro\\Membro da banca examinadora}
+\assinatura{Profa. Renata Marotta\\Membro da banca examinadora}
+\assinatura{Prof. Luis Augusto Carlini\\Membro da banca examinadora}
+\assinatura{Prof. José Sérgio Zeri Nunes\\Membro da banca examinadora}
 \end{folhadeaprovacao}
 % ---
 
